@@ -1,0 +1,75 @@
+services:
+  postgres_prod:
+    image: postgis/postgis:12-3.0
+    restart: always
+    volumes:
+      - marsinet_prod:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD_PROD}
+    ports:
+      - '5051:5432'
+
+  hasura_prod:
+    image: hasura/graphql-engine:v2.21.0.cli-migrations-v3
+    ports:
+      - '${HASURA_GRAPHQL_SERVER_PORT_PROD}:8080'
+    depends_on:
+      - postgres_prod
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: ${HASURA_GRAPHQL_DATABASE_URL_PROD}
+      HASURA_GRAPHQL_ENABLE_CONSOLE: 'true'
+      HASURA_GRAPHQL_ADMIN_SECRET: ${HASURA_GRAPHQL_ADMIN_SECRET_PROD}
+      HASURA_GRAPHQL_AUTH_HOOK: ${HASURA_GRAPHQL_AUTH_HOOK_PROD}
+      HASURA_GRAPHQL_AUTH_HOOK_MODE: POST
+      ACTION_BASE_ENDPOINT: ${ACTION_BASE_ENDPOINT_PROD}
+      EVENT_BASE_ENDPOINT: ${EVENT_BASE_ENDPOINT_PROD}
+    volumes:
+      - './hasura/prod/migrations:/hasura-migrations'
+      - './hasura/prod/metadata:/hasura-metadata'
+
+  postgres_dev:
+    image: postgis/postgis:12-3.0
+    restart: always
+    volumes:
+      - marsinet_dev:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - '5050:5432'
+
+  hasura_dev:
+    image: hasura/graphql-engine:v2.21.0.cli-migrations-v3
+    ports:
+      - '${HASURA_GRAPHQL_SERVER_PORT}:8080'
+    depends_on:
+      - postgres_dev
+    restart: always
+    environment:
+      HASURA_GRAPHQL_DATABASE_URL: ${HASURA_GRAPHQL_DATABASE_URL}
+      HASURA_GRAPHQL_ENABLE_CONSOLE: ${HASURA_GRAPHQL_ENABLE_CONSOLE}
+      HASURA_GRAPHQL_DEV_MODE: ${HASURA_GRAPHQL_DEV_MODE}
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: ${HASURA_GRAPHQL_ENABLED_LOG_TYPES}
+      HASURA_GRAPHQL_ADMIN_SECRET: ${HASURA_GRAPHQL_ADMIN_SECRET}
+      HASURA_GRAPHQL_AUTH_HOOK: ${HASURA_GRAPHQL_AUTH_HOOK}
+      HASURA_GRAPHQL_AUTH_HOOK_MODE: POST
+      ACTION_BASE_ENDPOINT: ${ACTION_BASE_ENDPOINT}
+      EVENT_BASE_ENDPOINT: ${EVENT_BASE_ENDPOINT}
+    volumes:
+      - './hasura/dev/migrations:/hasura-migrations'
+      - './hasura/dev/metadata:/hasura-metadata'
+
+  marsinet-report:
+    image: nginx
+    restart: always
+    logging:
+      driver: json-file
+    volumes:
+      - ./dist/apps/marsinet-report/:/usr/share/nginx/html:ro
+      - ./nginx/conf.d/marsinet-report:/etc/nginx/conf.d/:ro
+    ports:
+      - '10001:80' # Cambiado a 80 para reflejar el puerto estándar de Nginx dentro del contenedor
+
+volumes:
+  marsinet_dev:
+  marsinet_prod:

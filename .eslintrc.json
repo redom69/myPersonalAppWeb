@@ -1,0 +1,62 @@
+{
+  "root": true,
+  "ignorePatterns": ["!apps/**/*"],
+  "plugins": ["@nx", "react-hooks"],
+  "rules": {
+    "react-hooks/exhaustive-deps": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "api/**/*.ts",
+        "api/**/*.tsx",
+        "api/**/*.js",
+        "api/**/*.jsx",
+        "api-e2e/**/*.ts",
+        "api-e2e/**/*.tsx",
+        "api-e2e/**/*.js",
+        "api-e2e/**/*.jsx",
+        "marsinet/**/*.ts",
+        "marsinet/**/*.tsx",
+        "marsinet/**/*.js",
+        "marsinet/**/*.jsx",
+        "marsinet-e2e/**/*.ts",
+        "marsinet-e2e/**/*.tsx",
+        "marsinet-e2e/**/*.js",
+        "marsinet-e2e/**/*.jsx"
+      ],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "off",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts", "*.spec.tsx", "*.spec.js", "*.spec.jsx"],
+      "env": {
+        "jest": true
+      },
+      "rules": {}
+    }
+  ]
+}

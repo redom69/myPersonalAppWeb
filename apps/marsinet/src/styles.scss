@@ -1,0 +1,352 @@
+/* You can add global styles to this file, and also import other style files */
+
+//theme
+@import "./theme-autogenerate.scss";
+
+//core
+@import "primereact/resources/primereact.min.css";
+
+// Icon
+@import "primeicons/primeicons.css";
+
+// Flex
+@import "primeflex/primeflex.scss";
+
+/* VisbyCF - Bold */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Bold.otf");
+  font-weight: bold;
+}
+
+/* VisbyCF - Bold Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-BoldOblique.otf");
+  font-weight: bold;
+  font-style: oblique;
+}
+
+/* VisbyCF - DemiBold */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-DemiBold.otf");
+  font-weight: 600; /* DemiBold generalmente se considera 600 */
+}
+
+/* VisbyCF - DemiBold Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-DemiBoldOblique.otf");
+  font-weight: 600; /* DemiBold generalmente se considera 600 */
+  font-style: oblique;
+}
+
+/* VisbyCF - ExtraBold */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-ExtraBold.otf");
+  font-weight: 800; /* ExtraBold generalmente se considera 800 */
+}
+
+/* VisbyCF - ExtraBold Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-ExtraBoldOblique.otf");
+  font-weight: 800; /* ExtraBold generalmente se considera 800 */
+  font-style: oblique;
+}
+
+/* VisbyCF - Heavy */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Heavy.otf");
+  font-weight: 900; /* Heavy generalmente se considera 900 */
+}
+
+/* VisbyCF - Heavy Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-HeavyOblique.otf");
+  font-weight: 900; /* Heavy generalmente se considera 900 */
+  font-style: oblique;
+}
+
+/* VisbyCF - Light */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Light.otf");
+  font-weight: lighter; /* Light generalmente se considera lighter */
+}
+
+/* VisbyCF - Light Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-LightOblique.otf");
+  font-weight: lighter; /* Light generalmente se considera lighter */
+  font-style: oblique;
+}
+
+/* VisbyCF - Medium */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("apps/marsinet/src/assets/fonts/VisbyCF-Medium.otf") format("opentype");
+  font-weight: 500; /* Medium generalmente se considera 500 */
+}
+
+/* VisbyCF - Medium Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-MediumOblique.otf");
+  font-weight: 500; /* Medium generalmente se considera 500 */
+  font-style: oblique;
+}
+
+/* VisbyCF - Regular */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Regular.otf");
+}
+
+/* VisbyCF - Regular Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-RegularOblique.otf");
+  font-style: oblique;
+}
+
+/* VisbyCF - Thin */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Thin.otf");
+  font-weight: 100; /* Thin generalmente se considera 100 */
+}
+
+/* VisbyCF - Thin Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-ThinOblique.otf");
+  font-weight: 100; /* Thin generalmente se considera 100 */
+  font-style: oblique;
+}
+
+:root {
+  --forward-automatic-color-1: #004e78;
+  --forward-automatic-color-2: #005a94;
+  --forward-intention-color-1: #13dfb6;
+  --forward-intention-color-2: #17e8cc;
+  --backward-automatic-color-1: #df8f13;
+  --backward-automatic-color-2: #f1a830;
+  --backward-intention-color-1: #df1351;
+  --backward-intention-color-2: #f14567;
+}
+
+* {
+  font-family: "VisbyCF", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-border-style-radius-left {
+  border-top-left-radius: 15px;
+}
+
+.table-border-style-radius-right {
+  border-top-right-radius: 15px;
+}
+
+.table-border-style-radius-bottom-left {
+  border-bottom-left-radius: 15px;
+}
+
+.table-border-style-radius-bottom-right {
+  border-bottom-right-radius: 15px;
+}
+
+.shadow-custom {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+.container-graphs__shadow-customs-graphs {
+  box-shadow:
+    rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+    rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+
+.container-graph_distribution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position-icon {
+  top: 10px;
+  left: 10px;
+}
+
+.p-inputtext:enabled:hover {
+  border-color: #13dfb6;
+}
+
+.p-inputtext:enabled:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem #13dfb6be;
+  border-color: #13dfb6;
+}
+
+.p-selectbutton .p-button.p-highlight {
+  background: #fff !important;
+  border: 1px solid #ced4da !important;
+  color: #495057 !important;
+}
+
+.p-selectbutton .p-button {
+  background: #004e78 !important;
+  border-color: #004e78 !important;
+  color: #fff !important;
+}
+
+.p-column-filter-menu {
+  display: inline-flex;
+  margin-left: 10px !important;
+}
+
+.p-datatable.p-datatable-selectable
+  .p-datatable-tbody
+  > tr.p-selectable-row:not(.p-highlight):not(.p-datatable-emptymessage):hover {
+  background: #13dfb6;
+  color: white;
+}
+
+.p-column-title {
+  color: #ffffff !important;
+}
+
+.p-sortable-column-icon {
+  color: #ffffff !important;
+}
+
+.p-column-filter-menu-button {
+  color: #ffffff !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  background: #004e78 !important;
+}
+
+.p-datatable .p-sortable-column:not(.p-highlight):not(.p-sortable-disabled):hover {
+  background: #035683 !important;
+}
+
+.p-column-filter-menu-button:hover {
+  background: #004e78 !important;
+}
+
+.p-inputtext.p-invalid.p-component,
+.p-password.p-invalid.p-component > .p-inputtext,
+.p-calendar.p-invalid.p-component > .p-inputtext {
+  border-color: #e24c4c !important;
+  background: #e24c4c83 !important;
+  color: white !important;
+}
+
+.p-column-filter-menu-button.p-column-filter-menu-button-open,
+.p-column-filter-menu-button.p-column-filter-menu-button-open:hover {
+  background: #e9ecef80 !important;
+}
+
+.p-column-filter-menu-button.p-column-filter-menu-button-active,
+.p-column-filter-menu-button.p-column-filter-menu-button-active:hover {
+  background: #e9ecef80 !important;
+}
+
+.p-inputnumber.p-invalid.p-component > .p-inputtext {
+  border-color: #e24c4c !important;
+  background: #e24c4c83 !important;
+  color: white !important;
+}
+
+.p-datatable-emptymessage > td {
+  text-align: center !important;
+  font-weight: bold;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  background: #004e78;
+  border-color: #d1d1d1;
+  color: white;
+}
+
+.p-tabview .p-tabview-panels {
+  padding: 10px 0px 0px 0px !important;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+  box-shadow: none !important;
+}
+
+.p-datatable.p-datatable-sm .p-datatable-thead > tr > th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.p-datatable.p-datatable-sm .p-datatable-thead > tr > th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.p-dropdown.p-invalid.p-component {
+  border-color: #e24c4c;
+  background: #e24c4c83 !important;
+  color: white !important;
+}
+
+.p-scrollpanel .p-scrollpanel-bar {
+  background: #474c52;
+  border: 0 none;
+}
+
+.p-scrollpanel-content {
+  height: calc(100% + 18px);
+  width: calc(100% + 18px);
+  padding: 0 !important;
+  position: relative;
+  overflow: scroll;
+  box-sizing: border-box;
+}
+
+.add-codes-button {
+  background: #e9ecef !important;
+  color: #6c757d !important;
+}
+
+.add-codes-button:hover {
+  background: #004e78 !important;
+  border-color: #d1d1d1 !important;
+  color: white !important;
+}
+
+// MEDIA QUERIES TAMAÑO LETRA
+@media screen and (min-width: 1200px) {
+  .p-column-title {
+    font-size: 1rem;
+  }
+  .p-datatable.p-datatable-sm .p-datatable-tbody > tr > td {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .p-column-title {
+    font-size: 1.2rem;
+  }
+  .p-datatable.p-datatable-sm .p-datatable-tbody > tr > td {
+    font-size: 1.2rem;
+  }
+}

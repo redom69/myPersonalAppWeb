@@ -1,0 +1,14 @@
+.highlighted {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: blue; // Color del círculo resaltado
+    text-align: center; // Alinea el contenido en el centro del círculo
+    line-height: 20px; // Ajusta la línea de altura para centrar verticalmente el contenido
+    color: white; // Cambia el color del texto dentro del círculo, si es necesario
+}
+
+.not-highlighted {
+    // Estilos para días no resaltados, si es necesario
+}

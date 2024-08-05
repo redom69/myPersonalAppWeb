@@ -1,0 +1,36 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowJs": true,
+    "importHelpers": true,
+    "target": "es2019",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@marsinet/commons": ["libs/commons/src/index.ts"],
+      "@marsinet/server": ["libs/server/src/index.ts"],
+      "@marsinet/web-commons": ["libs/web-commons/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp", "**/*.test.ts", "**/*.spec.ts"],
+  "include": [
+    "apps/api/**/*.ts",
+    "apps/api/**/*.tsx",
+    "apps/marsinet/**/*.ts",
+    "apps/marsinet/**/*.tsx",
+    "scripts/**/*.ts"
+  ]
+}

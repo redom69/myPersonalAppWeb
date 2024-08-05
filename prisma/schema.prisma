@@ -1,0 +1,260 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("databaseUrlProd")
+  //   url      = env("databaseUrlDev")
+  schemas  = ["auth", "public"]
+}
+
+model user {
+  u_id                String                @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at          DateTime              @default(now()) @db.Timestamptz(6)
+  updated_at          DateTime              @default(now()) @db.Timestamptz(6)
+  email               String                @unique
+  password            String
+  o_id                String?               @db.Uuid
+  active              Boolean?              @default(false)
+  is_admin            Boolean?              @default(false)
+  organizations       organizations?        @relation(fields: [o_id], references: [o_id], onDelete: Cascade)
+  user_data           user_data?
+  user_reset_password user_reset_password[]
+  config_patient      config_patient[]
+  ingestion           ingestion[]
+
+  @@schema("auth")
+}
+
+model user_data {
+  u_id        String    @id @db.Uuid
+  name        String?
+  surnames    String?
+  phone       String?
+  birth_date  DateTime? @db.Timestamptz(6)
+  nationality String?
+  created_at  DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at  DateTime? @default(now()) @db.Timestamptz(6)
+  user        user      @relation(fields: [u_id], references: [u_id], onDelete: Cascade)
+
+  @@schema("auth")
+}
+
+model user_reset_password {
+  id         String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  u_id       String?   @db.Uuid
+  r          String?   @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at DateTime? @default(now()) @db.Timestamptz(6)
+  user       user?     @relation(fields: [u_id], references: [u_id], onDelete: Cascade)
+
+  @@schema("auth")
+}
+
+model devices {
+  d_id                    String                    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at              DateTime                  @default(now()) @db.Timestamptz(6)
+  updated_at              DateTime                  @default(now()) @db.Timestamptz(6)
+  active                  Boolean                   @default(true)
+  serial                  String                    @unique(map: "serial_unique") @default("")
+  structure_version       String                    @default("'")
+  password                String?
+  model                   String?
+  ingestion               ingestion[]
+  organization_has_device organization_has_device[]
+  sessions                sessions[]
+
+  @@schema("public")
+}
+
+model organizations {
+  o_id                     String                     @id(map: "organization_pkey") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  name                     String
+  created_at               DateTime                   @default(now()) @db.Timestamptz(6)
+  updated_at               DateTime                   @default(now()) @db.Timestamptz(6)
+  street_name              String                     @default("")
+  street_number            String                     @default("")
+  country                  String                     @default("")
+  city                     String                     @default("")
+  role                     String
+  premium                  Boolean                    @default(true)
+  postal_code              String?
+  user                     user[]
+  organization_has_device  organization_has_device[]
+  organization_has_patient organization_has_patient[]
+
+  @@schema("public")
+}
+
+model sessions {
+  id                                       String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at                               DateTime   @default(now()) @db.Timestamptz(6)
+  updated_at                               DateTime   @default(now()) @db.Timestamptz(6)
+  steps_automatic_forward                  Int        @default(0)
+  steps_automatic_backward                 Int        @default(0)
+  steps_intention_forward                  Int        @default(0)
+  steps_intention_backward                 Int        @default(0)
+  flexos_hip                               Int        @default(0)
+  flexos_knee                              Int        @default(0)
+  flexos_ankle                             Int        @default(0)
+  effort                                   Int        @default(0)
+  d_id                                     String?    @db.Uuid
+  date                                     DateTime   @default(now()) @db.Timestamptz(6)
+  start_time                               DateTime?  @db.Timestamptz(6)
+  end_time                                 DateTime   @db.Timestamptz(6)
+  p_id                                     String     @db.Uuid
+  time_automatic_forward                   Float      @default(0)
+  time_automatic_backward                  Float      @default(0)
+  time_intentiton_forward                  Float      @default(0)
+  time_intention_backward                  Float      @default(0)
+  steps_total                              Int        @default(0)
+  time_total                               Float      @default(0)
+  cadence_automatic_forward                Float      @default(0)
+  cadence_automatic_backward               Float      @default(0)
+  cadence_intention_forward                Float      @default(0)
+  cadence_intention_backward               Float      @default(0)
+  evaluation                               Int?       @default(0)
+  has_chest                                Int?       @default(0)
+  threshold_hipl                           Int?       @default(0)
+  threshold_kneel                          Int?       @default(0)
+  threshold_hipr                           Int?       @default(0)
+  threshold_kneer                          Int?       @default(0)
+  i_id                                     String?    @db.Uuid
+  timeWalking                              Float?
+  timeUse                                  Float?
+  timeSession                              Float?
+  threshold_anklel                         Int?
+  threshold_ankler                         Int?
+  ingestion_ingestion_session_idTosessions ingestion? @relation("ingestion_session_idTosessions")
+  devices                                  devices?   @relation(fields: [d_id], references: [d_id], onDelete: Cascade)
+  ingestion                                ingestion? @relation(fields: [i_id], references: [id], onDelete: Cascade, map: "sessions_ingestion_id_fkey")
+
+  @@schema("public")
+}
+
+model ingestion {
+  id                                      String     @id @unique(map: "idx_unique_ingestion_id") @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  created_at                              DateTime   @default(now()) @db.Timestamptz(6)
+  updated_at                              DateTime   @default(now()) @db.Timestamptz(6)
+  process                                 Boolean    @default(false)
+  error_msg                               String?
+  zip_data                                String?
+  u_id                                    String?    @db.Uuid
+  d_id                                    String?    @db.Uuid
+  is_session                              Boolean?
+  session_id                              String?    @unique @db.Uuid
+  alarms                                  alarms[]
+  devices                                 devices?   @relation(fields: [d_id], references: [d_id], onUpdate: NoAction, map: "fk_ingestion_device")
+  user                                    user?      @relation(fields: [u_id], references: [u_id], onDelete: NoAction, onUpdate: NoAction, map: "fk_ingestion_user")
+  sessions_ingestion_session_idTosessions sessions?  @relation("ingestion_session_idTosessions", fields: [session_id], references: [id], onDelete: Cascade, onUpdate: NoAction)
+  sessions                                sessions[]
+
+  @@schema("public")
+}
+
+model alarms {
+  id         String     @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  event_type String?    @db.VarChar(255)
+  event_id   String?
+  value      Int?
+  params     Json?
+  timestamp  DateTime?  @default(now()) @db.Timestamptz(6)
+  version    String?
+  updated_at DateTime   @default(now()) @db.Timestamptz(6)
+  i_id       String?    @db.Uuid
+  ingestion  ingestion? @relation(fields: [i_id], references: [id], onDelete: Cascade, map: "alarms_ingestion_id_fkey")
+
+  @@schema("public")
+}
+
+model config_patient {
+  p_id         String    @id @db.Uuid
+  version      Int?      @default(0)
+  weight       Int?      @default(0)
+  height       Int?      @default(0)
+  weight_units String?   @default("kg")
+  height_units String?   @default("cm")
+  chest_size   String?   @default("M")
+  shoe_size    Int?      @default(0)
+  femur_len_l  Int?      @default(0)
+  femur_len_r  Int?      @default(0)
+  tibia_len_l  Int?      @default(0)
+  tibia_len_r  Int?      @default(0)
+  walker_len   Int?      @default(0)
+  hip_width    Int?      @default(0)
+  flexos_hip   Int?      @default(0)
+  flexos_knee  Int?      @default(0)
+  created_at   DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at   DateTime? @default(now()) @db.Timestamptz(6)
+  u_id         String?   @db.Uuid
+  abd          Int?      @default(0)
+  ankle_lock   Boolean?  @default(false)
+  corset       String?   @default("Small Flat") @db.VarChar(255)
+  patients     patients  @relation(fields: [p_id], references: [p_id], onDelete: NoAction, onUpdate: NoAction, map: "fk_config_patient")
+  user         user?     @relation(fields: [u_id], references: [u_id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@schema("public")
+}
+
+model patient_data {
+  p_id                   String    @id @db.Uuid
+  name                   String?
+  surnames               String?
+  legal_guardian_email_1 String?
+  legal_guardian_email_2 String?
+  phone                  String?
+  legal_guardian_name_1  String?
+  legal_guardian_name_2  String?
+  created_at             DateTime? @default(now()) @db.Timestamptz(6)
+  updated_at             DateTime? @default(now()) @db.Timestamptz(6)
+  patients               patients  @relation(fields: [p_id], references: [p_id], onDelete: Cascade, onUpdate: NoAction, map: "fk_patient")
+
+  @@schema("public")
+}
+
+model patients {
+  p_id                     String                     @id @db.Uuid
+  sex                      String?
+  birth_date               DateTime?                  @db.Timestamptz(6)
+  pathology                String[]
+  affection                String[]
+  treatment                String[]
+  city                     String?
+  nationality              String?
+  last_session             DateTime?                  @db.Timestamptz(6)
+  total_sessions           Int?                       @default(0)
+  total_steps              Int?                       @default(0)
+  created_at               DateTime?                  @default(now()) @db.Timestamptz(6)
+  updated_at               DateTime?                  @default(now()) @db.Timestamptz(6)
+  config_patient           config_patient?
+  organization_has_patient organization_has_patient[]
+  patient_data             patient_data?
+
+  @@schema("public")
+}
+
+model organization_has_patient {
+  o_id          String        @db.Uuid
+  p_id          String        @db.Uuid
+  created_at    DateTime?     @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime?     @default(now()) @db.Timestamptz(6)
+  organizations organizations @relation(fields: [o_id], references: [o_id], onDelete: Cascade, onUpdate: NoAction)
+  patients      patients      @relation(fields: [p_id], references: [p_id], onDelete: Cascade, onUpdate: NoAction)
+
+  @@id([o_id, p_id])
+  @@schema("public")
+}
+
+model organization_has_device {
+  o_id          String        @db.Uuid
+  d_id          String        @db.Uuid
+  created_at    DateTime?     @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime?     @default(now()) @db.Timestamptz(6)
+  devices       devices       @relation(fields: [d_id], references: [d_id], onDelete: Cascade, onUpdate: NoAction)
+  organizations organizations @relation(fields: [o_id], references: [o_id], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([o_id, d_id])
+  @@schema("public")
+}

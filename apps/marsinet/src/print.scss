@@ -1,0 +1,8 @@
+.break-page {
+    page-break-before: always;
+    break-before: always;
+}
+
+.no-print-page {
+    display: none !important;
+}

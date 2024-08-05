@@ -1,0 +1,67 @@
+name: CI/CD Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Set NX Cloud Access Token
+        run: echo "NX_CLOUD_ACCESS_TOKEN=${{ secrets.NX_CLOUD_ACCESS_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Set SHAs for Nx
+        uses: nrwl/nx-set-shas@v4
+
+      - name: Check Prettier formatting
+        run: |
+          npx prettier --check 'apps/api/**/*.{ts,tsx,js,jsx,json,css,md}'
+          npx prettier --check 'apps/marsinet/**/*.{ts,tsx,js,jsx,json,css,md}'
+
+      - name: Record Nx Format Check
+        run: npx nx-cloud record -- nx format:check
+
+      - name: Run Lint
+        run: |
+          npx nx-cloud record -- nx lint api
+          npx nx-cloud record -- nx lint marsinet
+
+      - name: Run Tests
+        run: |
+          cd apps/api && npx jest
+          cd ../marsinet && npx jest
+
+      - name: Build Projects
+        run: |
+          npx nx-cloud record -- nx build api --skip-nx-cache --max-workers=1 --prod
+          npx nx-cloud record -- nx build marsinet --skip-nx-cache --max-workers=1 --prod
+
+      #- name: Run e2e test for marsinet
+      # run: |
+      #  npx nx-cloud record -- nx e2e marsinet-e2e

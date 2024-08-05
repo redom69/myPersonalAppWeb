@@ -1,0 +1,165 @@
+/* You can add global styles to this file, and also import other style files */
+
+//theme
+@import "./theme-autogenerate.scss";
+
+//core
+@import "primereact/resources/primereact.min.css";
+
+// Icon
+@import "primeicons/primeicons.css";
+
+// Flex
+@import "primeflex/primeflex.scss";
+
+/* VisbyCF - Bold */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Bold.otf");
+  font-weight: bold;
+}
+
+/* VisbyCF - Bold Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-BoldOblique.otf");
+  font-weight: bold;
+  font-style: oblique;
+}
+
+/* VisbyCF - DemiBold */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-DemiBold.otf");
+  font-weight: 600; /* DemiBold generalmente se considera 600 */
+}
+
+/* VisbyCF - DemiBold Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-DemiBoldOblique.otf");
+  font-weight: 600; /* DemiBold generalmente se considera 600 */
+  font-style: oblique;
+}
+
+/* VisbyCF - ExtraBold */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-ExtraBold.otf");
+  font-weight: 800; /* ExtraBold generalmente se considera 800 */
+}
+
+/* VisbyCF - ExtraBold Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-ExtraBoldOblique.otf");
+  font-weight: 800; /* ExtraBold generalmente se considera 800 */
+  font-style: oblique;
+}
+
+/* VisbyCF - Heavy */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Heavy.otf");
+  font-weight: 900; /* Heavy generalmente se considera 900 */
+}
+
+/* VisbyCF - Heavy Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-HeavyOblique.otf");
+  font-weight: 900; /* Heavy generalmente se considera 900 */
+  font-style: oblique;
+}
+
+/* VisbyCF - Light */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Light.otf");
+  font-weight: lighter; /* Light generalmente se considera lighter */
+}
+
+/* VisbyCF - Light Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-LightOblique.otf");
+  font-weight: lighter; /* Light generalmente se considera lighter */
+  font-style: oblique;
+}
+
+/* VisbyCF - Medium */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("apps/marsinet/src/assets/fonts/VisbyCF-Medium.otf") format("opentype");
+  font-weight: 500; /* Medium generalmente se considera 500 */
+}
+
+/* VisbyCF - Medium Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-MediumOblique.otf");
+  font-weight: 500; /* Medium generalmente se considera 500 */
+  font-style: oblique;
+}
+
+/* VisbyCF - Regular */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Regular.otf");
+}
+
+/* VisbyCF - Regular Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-RegularOblique.otf");
+  font-style: oblique;
+}
+
+/* VisbyCF - Thin */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-Thin.otf");
+  font-weight: 100; /* Thin generalmente se considera 100 */
+}
+
+/* VisbyCF - Thin Oblique */
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/assets/fonts/VisbyCF-ThinOblique.otf");
+  font-weight: 100; /* Thin generalmente se considera 100 */
+  font-style: oblique;
+}
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+
+* {
+  font-family: "VisbyCF", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-border-style-radius-left {
+  border-top-left-radius: 15px;
+}
+
+.table-border-style-radius-right {
+  border-top-right-radius: 15px;
+}
+
+.table-border-style-radius-bottom-left {
+  border-bottom-left-radius: 15px;
+}
+
+.table-border-style-radius-bottom-right {
+  border-bottom-right-radius: 15px;
+}
