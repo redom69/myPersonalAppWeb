@@ -24,8 +24,8 @@ export function ReportHeader(props: any) {
       style={{ pageBreakBefore: 'always' }}
     >
       <img
-        src="/assets/marsi-azul-degradado-fondo-blanco.png"
-        alt="logo marsinet"
+        src="/assets/icons8-laravel-96.png"
+        alt="logo"
         style={{ width: '380px' }}
       />
       <div className="surface-ground p-3 border-round-3xl text-600 text-center md:text-right">

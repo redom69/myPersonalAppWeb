@@ -59,14 +59,14 @@ const ResetPassword: React.FC = () => {
   return (
     <div
       className="flex align-items-center justify-content-center py-8 min-h-screen"
-      style={{ background: 'linear-gradient(60deg, #13dfb6 0%,#004e78 100%)' }}
+      style={{ background: 'linear-gradient(60deg, #6C1AFF 0%,#C822FF 100%)' }}
     >
       {!messageSent ? (
         <div className="px-6 surface-100 shadow-2 text-center w-11 md:w-25rem lg:w-30rem formgrid p-fluid border-round-3xl">
           <div className="text-4xl font-medium">
             <img
-              src="/assets/marsi-azul-degradado-fondo-blanco.png"
-              alt="logo marsinet"
+              src="/assets/icons8-laravel-96.png"
+              alt="logo"
               style={{ width: '300px' }}
             />
           </div>
@@ -128,9 +128,9 @@ const ResetPassword: React.FC = () => {
         <div className="px-4 py-5 surface-100 shadow-2 text-center mx-2 w-10 md:w-7 formgrid p-fluid border-round-3xl">
           <div>
             <img
-              src="/assets/marsi-azul-degradado-fondo-blanco.png"
+              src="/assets/icons8-laravel-96.png"
               className="w-5 lg:w-3"
-              alt="logo marsinet"
+              alt="logo"
             />
           </div>
           <div className="text-xl lg:text-2xl font-medium">

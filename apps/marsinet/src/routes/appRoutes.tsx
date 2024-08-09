@@ -141,24 +141,28 @@ export function AppRoutes() {
           <div
             className="min-h-screen flex relative "
             style={{
-              background: 'linear-gradient(60deg, #13dfb6 0%,#004e78 100%)',
+              background: 'linear-gradient(60deg, #6C1AFF 0%,#C822FF 100%)',
             }}
           >
             {/* Menu Lateral */}
             <div
               id="app-sidebar"
               className="surface-section h-full  hidden  flex-shrink-0 absolute  left-0 top-0 z-5 border-right-1 surface-border select-none "
-              style={{ width: '209px' }}
+              style={{ width: '200px' }}
             >
               <div className="flex flex-column h-full fixed py-2">
                 {/* Logo Aplicación */}
-                <div className="flex align-items-center px-2 flex-shrink-0">
+                <div className="flex justify-center items-center px-6 flex-shrink-0">
                   <img
-                    src="/assets/marsi-azul-degradado-fondo-blanco.png"
-                    alt="logo marsinet"
-                    style={{ width: '193px' }}
+                    src="/assets/icons8-laravel-96.png"
+                    alt="logo"
+                    style={{
+                      paddingBottom: '10px',
+                      width: '103px',
+                    }}
                   />
                 </div>
+
                 {/* Menu */}
                 <div className="flex-grow-1 overflow-auto">
                   <ul className="list-none p-0 m-0 overflow-hidden">
@@ -201,7 +205,9 @@ export function AppRoutes() {
                     })}
                   </ul>
                 </div>
-                <footer className="flex justify-content-center align-items-center py-9">
+
+                {/* Footer */}
+                <footer className="flex justify-center items-center py-9">
                   {`version ${VERSION}`}
                 </footer>
               </div>
@@ -244,9 +250,9 @@ export function AppRoutes() {
                 {/* Logo */}
                 <div className="w-full text-center">
                   <img
-                    src="/assets/marsi-azul-degradado-fondo-blanco-plano.png"
-                    alt="logo marsinet"
-                    style={{ width: '350px', cursor: 'pointer' }}
+                    src="/assets/icons8-laravel-96.png"
+                    alt="logo"
+                    style={{ width: '50px', cursor: 'pointer' }}
                     onClick={() => (window.location.href = '/authenticated')}
                   />
                 </div>

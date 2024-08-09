@@ -84,8 +84,8 @@ export const VerifyAccount: React.FC<VerifyAccountProps> = ({ is_active }) => {
         >
           <div className="text-center mb-4">
             <img
-              src="/assets/marsi-azul-degradado-fondo-blanco.png"
-              alt="logo marsinet"
+              src="/assets/icons8-laravel-96.png"
+              alt="logo"
               style={{ width: '293px' }}
             />
           </div>

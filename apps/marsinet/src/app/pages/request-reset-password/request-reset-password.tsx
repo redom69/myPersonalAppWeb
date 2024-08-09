@@ -84,14 +84,14 @@ export function RequestResetPassword() {
       <div
         className="flex align-items-center justify-content-center py-8 min-h-screen"
         style={{
-          background: 'linear-gradient(60deg, #13dfb6 0%,#004e78 100%)',
+          background: 'linear-gradient(60deg, #6C1AFF 0%,#C822FF 100%)',
         }}
       >
         <div className="px-4 surface-100 shadow-2 text-center mx-2 w-10 md:w-25rem lg:w-30rem formgrid p-fluid border-round-3xl">
           <div className="text-4xl font-medium">
             <img
-              src="/assets/marsi-azul-degradado-fondo-blanco.png"
-              alt="logo marsinet"
+              src="/assets/icons8-laravel-96.png"
+              alt="logo"
               style={{ width: '300px' }}
               className="text-center"
             />
@@ -151,16 +151,12 @@ export function RequestResetPassword() {
     <div
       className="flex align-items-center justify-content-center py-8 min-h-screen"
       style={{
-        background: 'linear-gradient(60deg, #13dfb6 0%,#004e78 100%)',
+        background: 'linear-gradient(60deg, #6C1AFF 0%,#C822FF 100%)',
       }}
     >
       <div className="px-4 py-8 surface-100 shadow-2 text-center mx-2 formgrid p-fluid border-round-3xl">
         <div>
-          <img
-            src="/assets/marsi-azul-degradado-fondo-blanco.png"
-            className="w-3"
-            alt="logo marsinet"
-          />
+          <img src="/assets/icons8-laravel-96.png" className="w-3" alt="logo" />
         </div>
         <div className="text-3xl font-medium">
           {t('pages.requestResetPassword.messageSent')}

@@ -225,7 +225,7 @@ export function Register(props: RegisterProps) {
       <div
         className="min-h-screen pb-6"
         style={{
-          background: 'linear-gradient(60deg, #13dfb6 0%,#004e78 100%)',
+          background: 'linear-gradient(60deg, #6C1AFF 0%,#C822FF 100%)',
         }}
       >
         <div className="absolute right-0 top-0">
@@ -244,8 +244,8 @@ export function Register(props: RegisterProps) {
             >
               <div className="mb-5">
                 <img
-                  src="/assets/marsi-azul-degradado-fondo-blanco.png"
-                  alt="logo marsinet"
+                  src="/assets/icons8-laravel-96.png"
+                  alt="logo"
                   style={{ width: '300px' }}
                   className="text-center"
                 />
@@ -280,8 +280,8 @@ export function Register(props: RegisterProps) {
               <div className="col-12 p-0">
                 <img
                   className="w-18rem lg:w-20rem"
-                  src="/assets/marsi-azul-degradado-fondo-blanco.png"
-                  alt="logo marsinet"
+                  src="/assets/icons8-laravel-96.png"
+                  alt="logo"
                 />
               </div>
               <div className="col-12 p-0">

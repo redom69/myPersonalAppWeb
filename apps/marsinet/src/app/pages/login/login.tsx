@@ -10,8 +10,6 @@ import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
 import { classNames } from 'primereact/utils';
 
-import { Player } from '@lottiefiles/react-lottie-player';
-
 import { UserNotAuthenticatedApiFactory } from '../../typescript-axios';
 import { MarsinetContext } from '../../context/marsinetProvider';
 import SelectorLanguageComponent from '../../components/selector-language-component/selector-language-component';
@@ -21,8 +19,6 @@ import {
   LOCAL_STORAGE_TOKEN,
   LOCAL_STORAGE_REFRESH_TOKEN,
 } from '../../../environments/environment';
-
-import reactLegs from 'apps/marsinet/src/assets/logoAnimation_legs.json';
 
 const apiService = UserNotAuthenticatedApiFactory();
 
@@ -100,7 +96,7 @@ const Login: React.FC = () => {
     <div
       className="min-h-screen pb-6"
       style={{
-        background: 'linear-gradient(60deg, #13dfb6 0%,#004e78 100%)',
+        background: 'linear-gradient(60deg, #6C1AFF 0%,#C822FF 100%)',
       }}
     >
       <div className="absolute right-0 top-0">
@@ -128,38 +124,23 @@ const Login: React.FC = () => {
                 style={{
                   position: 'relative',
                   textAlign: 'center',
-                  paddingTop: '60px',
+                  paddingTop: '80px',
                 }}
               >
-                <Player
-                  src={reactLegs}
-                  className="player"
-                  loop
-                  autoplay
-                  style={{ height: '170px', width: '170px' }}
-                />
                 <img
-                  src="/assets/marsi-azul-degradado-fondo-blanco-recortado.png"
-                  alt="logo marsinet"
-                  style={{ width: '300px', paddingTop: '20px' }}
+                  src="/assets/icons8-laravel-96.png"
+                  alt="logo"
+                  style={{ width: '150px' }}
+                  className="text-center"
                 />
               </div>
             ) : (
               <img
-                src="/assets/marsi-azul-degradado-fondo-blanco.png"
-                alt="logo marsinet"
-                style={{ width: '300px' }}
+                src="/assets/icons8-laravel-96.png"
+                alt="logo"
+                style={{ width: '100px', paddingTop: '30px' }}
                 className="text-center"
               />
-            )}
-
-            {!loading && (
-              <div className="text-2xl font-italic">
-                <strong>{t('pages.login.slogan.a')}</strong>
-                <br />
-                {t('pages.login.slogan.b')}
-                <br />
-              </div>
             )}
           </div>
           <Toast ref={toast} position="top-center" />

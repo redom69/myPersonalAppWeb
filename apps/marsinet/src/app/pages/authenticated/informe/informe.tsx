@@ -283,16 +283,16 @@ export function Informe(props: InformeProps) {
         label: t('pages.reports.graphs.forwardIntention'),
         data: sortedEntries.map(([_, steps]) => steps.forwardIntention),
         fill: false,
-        borderColor: '#004E78',
-        backgroundColor: '#004E78',
+        borderColor: '#C822FF',
+        backgroundColor: '#C822FF',
         tension: 0,
       },
       {
         label: t('pages.reports.graphs.automaticForward'),
         data: sortedEntries.map(([_, steps]) => steps.automaticForward),
         fill: false,
-        borderColor: '#13DFB6',
-        backgroundColor: '#13DFB6',
+        borderColor: '#6C1AFF',
+        backgroundColor: '#6C1AFF',
         tension: 0,
       },
       {
@@ -381,8 +381,8 @@ export function Informe(props: InformeProps) {
         label: t('pages.reports.graphs.automaticForward'),
         data: sessionInAMonth.map((s) => s.evaluation),
         fill: false,
-        borderColor: '#004E78',
-        backgroundColor: '#004E78',
+        borderColor: '#C822FF',
+        backgroundColor: '#C822FF',
         tension: 0,
         datalabels: {
           align: 'end',
@@ -489,7 +489,7 @@ export function Informe(props: InformeProps) {
         data: sessionInAYear.map(
           (s) => getTotalsOfSessions(s.sessions).total_steps_intention_forward
         ),
-        backgroundColor: ['#004E78'],
+        backgroundColor: ['#C822FF'],
         borderWidth: 1,
       },
       {
@@ -497,7 +497,7 @@ export function Informe(props: InformeProps) {
         data: sessionInAYear.map(
           (s) => getTotalsOfSessions(s.sessions).total_steps_automatic_forward
         ),
-        backgroundColor: ['#13DFB6'],
+        backgroundColor: ['#6C1AFF'],
         borderWidth: 1,
       },
       {
@@ -627,7 +627,7 @@ export function Informe(props: InformeProps) {
         data: sessionInAYear.map(
           (s) => getTotalsOfSessions(s.sessions).total_time_intentiton_forward
         ),
-        backgroundColor: ['#004E78'],
+        backgroundColor: ['#C822FF'],
         borderWidth: 1,
       },
       {
@@ -635,7 +635,7 @@ export function Informe(props: InformeProps) {
         data: sessionInAYear.map(
           (s) => getTotalsOfSessions(s.sessions).total_time_automatic_forward
         ),
-        backgroundColor: ['#13DFB6'],
+        backgroundColor: ['#6C1AFF'],
         borderWidth: 1,
       },
       {
@@ -713,8 +713,8 @@ export function Informe(props: InformeProps) {
           (s) => getTotalsOfSessions(s.sessions).median_evaluation
         ),
         fill: false,
-        borderColor: '#004E78',
-        backgroundColor: '#004E78',
+        borderColor: '#C822FF',
+        backgroundColor: '#C822FF',
         tension: 0,
         datalabels: {
           align: 'end',

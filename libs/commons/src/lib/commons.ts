@@ -1343,8 +1343,8 @@ export const TYPE_USER = [
 ];
 
 export const colors = [
-  '#004e78',
-  '#13dfb6',
+  '#C822FF',
+  '#6C1AFF',
   '#df8f13',
   '#df1351',
   '#3399FF',

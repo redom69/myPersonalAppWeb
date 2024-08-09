@@ -186,7 +186,7 @@ export function AreaChartCustom(props: Readonly<AreaChartCustomProps>) {
           <Brush
             dataKey="timestamp"
             height={30}
-            stroke="#004e78"
+            stroke="#C822FF"
             fill="#e0e0e0"
             travellerWidth={10}
             tickFormatter={(value) => value}

@@ -12,7 +12,7 @@ export function LegalNotice(props: LegalNoticeProps) {
     <div
       className="min-h-screen pb-6"
       style={{
-        background: 'linear-gradient(60deg, #13dfb6 0%,#004e78 100%)',
+        background: 'linear-gradient(60deg, #6C1AFF 0%,#C822FF 100%)',
       }}
     >
       <div className="absolute right-0 top-0">
@@ -25,8 +25,8 @@ export function LegalNotice(props: LegalNoticeProps) {
           <div className="col-12 text-center p-0">
             <img
               className="w-18rem lg:w-15rem"
-              src="/assets/marsi-azul-degradado-fondo-blanco.png"
-              alt="logo marsinet"
+              src="/assets/icons8-laravel-96.png"
+              alt="logo"
             />
           </div>
           <div className="col-12 px-3">

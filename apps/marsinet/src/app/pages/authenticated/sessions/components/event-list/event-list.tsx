@@ -76,9 +76,9 @@ export function EventList(props: Readonly<EventListProps>) {
 
   const itemsTemplate = (item: Alarm, index: number) => {
     const fechaHora = obtenerFechaYHoraDeTimestamp(item.timestamp);
-    const circleColor = item.value === 1 ? '#13dfb6' : 'gray';
-    const statusColor = item.value === 1 ? '#13dfb6' : 'gray';
-    const eyeIconColor = '#13dfb6';
+    const circleColor = item.value === 1 ? '#6C1AFF' : 'gray';
+    const statusColor = item.value === 1 ? '#6C1AFF' : 'gray';
+    const eyeIconColor = '#6C1AFF';
     const paddingClass = getPaddingClass(item);
 
     return (

@@ -400,7 +400,7 @@ export function Home(props: HomeProps) {
                         <img
                           alt="clock-marsinet"
                           className="w-5rem"
-                          src="assets/clock-marsinet.png"
+                          src="assets/icons8-clock-100.png"
                         />
                         <div className="text-center text-700 text-2xl font-bold mb-3">
                           {t('pages.patients.viewPatient.sessions.totalTime')}
@@ -439,8 +439,8 @@ export function Home(props: HomeProps) {
                       <div className="text-center">
                         <img
                           className="w-5rem"
-                          src="assets/steps-marsinet.png"
-                          alt="steps-marsinet"
+                          src="assets/icons8-footprint-80.png"
+                          alt="steps"
                         />
                         <div className="text-center text-700 text-2xl font-bold mb-3">
                           {t('pages.patients.viewPatient.sessions.totalSteps')}

@@ -122,7 +122,7 @@ export function processSessions(sessions: any[]): any[] {
       acc[sessionDate].push(session);
       return acc;
     },
-    {} as Record<string, any[]>,
+    {} as Record<string, any[]>
   );
 
   const mergedSessions = (Object.values(groupedSessions) as any[][])
@@ -153,52 +153,52 @@ export function processSessions(sessions: any[]): any[] {
           merged.flexos_hip = Math.min(merged.flexos_hip, session.flexos_hip);
           merged.flexos_knee = Math.min(
             merged.flexos_knee,
-            session.flexos_knee,
+            session.flexos_knee
           );
           merged.flexos_ankle = Math.min(
             merged.flexos_ankle,
-            session.flexos_ankle,
+            session.flexos_ankle
           );
 
           merged.threshold_hipl = Math.max(
             merged.threshold_hipl,
-            session.threshold_hipl,
+            session.threshold_hipl
           );
           merged.threshold_kneel = Math.max(
             merged.threshold_kneel,
-            session.threshold_kneel,
+            session.threshold_kneel
           );
           merged.threshold_hipr = Math.max(
             merged.threshold_hipr,
-            session.threshold_hipr,
+            session.threshold_hipr
           );
           merged.threshold_kneer = Math.max(
             merged.threshold_kneer,
-            session.threshold_kneer,
+            session.threshold_kneer
           );
           merged.threshold_anklel = Math.max(
             merged.threshold_anklel,
-            session.threshold_anklel,
+            session.threshold_anklel
           );
           merged.threshold_ankler = Math.max(
             merged.threshold_ankler,
-            session.threshold_ankler,
+            session.threshold_ankler
           );
 
           merged.start_time = merged.start_time
             ? new Date(
                 Math.min(
                   merged.start_time.getTime(),
-                  session.start_time ? session.start_time.getTime() : Infinity,
-                ),
+                  session.start_time ? session.start_time.getTime() : Infinity
+                )
               )
             : session.start_time;
           merged.end_time = merged.end_time
             ? new Date(
                 Math.max(
                   merged.end_time.getTime(),
-                  session.end_time ? session.end_time.getTime() : -Infinity,
-                ),
+                  session.end_time ? session.end_time.getTime() : -Infinity
+                )
               )
             : session.end_time;
 
@@ -213,16 +213,16 @@ export function processSessions(sessions: any[]): any[] {
             ? new Date(
                 Math.min(
                   merged.created_at.getTime(),
-                  session.created_at.getTime(),
-                ),
+                  session.created_at.getTime()
+                )
               )
             : session.created_at;
           merged.updated_at = merged.updated_at
             ? new Date(
                 Math.max(
                   merged.updated_at.getTime(),
-                  session.updated_at.getTime(),
-                ),
+                  session.updated_at.getTime()
+                )
               )
             : session.updated_at;
           merged.effort = session.effort || merged.effort;
@@ -269,7 +269,7 @@ export function processSessions(sessions: any[]): any[] {
           evaluation: null,
           has_chest: null,
           i_id: null,
-        },
+        }
       );
     })
     .map((session) => {
@@ -311,7 +311,7 @@ export function processSessionsByPatient(sessions: any[]): any[] {
       acc[key].push(session);
       return acc;
     },
-    {} as Record<string, any[]>,
+    {} as Record<string, any[]>
   );
 
   const mergedSessions = (Object.values(groupedSessions) as any[][])
@@ -342,52 +342,52 @@ export function processSessionsByPatient(sessions: any[]): any[] {
           merged.flexos_hip = Math.min(merged.flexos_hip, session.flexos_hip);
           merged.flexos_knee = Math.min(
             merged.flexos_knee,
-            session.flexos_knee,
+            session.flexos_knee
           );
           merged.flexos_ankle = Math.min(
             merged.flexos_ankle,
-            session.flexos_ankle,
+            session.flexos_ankle
           );
 
           merged.threshold_hipl = Math.max(
             merged.threshold_hipl,
-            session.threshold_hipl,
+            session.threshold_hipl
           );
           merged.threshold_kneel = Math.max(
             merged.threshold_kneel,
-            session.threshold_kneel,
+            session.threshold_kneel
           );
           merged.threshold_hipr = Math.max(
             merged.threshold_hipr,
-            session.threshold_hipr,
+            session.threshold_hipr
           );
           merged.threshold_kneer = Math.max(
             merged.threshold_kneer,
-            session.threshold_kneer,
+            session.threshold_kneer
           );
           merged.threshold_anklel = Math.max(
             merged.threshold_anklel,
-            session.threshold_anklel,
+            session.threshold_anklel
           );
           merged.threshold_ankler = Math.max(
             merged.threshold_ankler,
-            session.threshold_ankler,
+            session.threshold_ankler
           );
 
           merged.start_time = merged.start_time
             ? new Date(
                 Math.min(
                   merged.start_time.getTime(),
-                  session.start_time ? session.start_time.getTime() : Infinity,
-                ),
+                  session.start_time ? session.start_time.getTime() : Infinity
+                )
               )
             : session.start_time;
           merged.end_time = merged.end_time
             ? new Date(
                 Math.max(
                   merged.end_time.getTime(),
-                  session.end_time ? session.end_time.getTime() : -Infinity,
-                ),
+                  session.end_time ? session.end_time.getTime() : -Infinity
+                )
               )
             : session.end_time;
 
@@ -402,16 +402,16 @@ export function processSessionsByPatient(sessions: any[]): any[] {
             ? new Date(
                 Math.min(
                   merged.created_at.getTime(),
-                  session.created_at.getTime(),
-                ),
+                  session.created_at.getTime()
+                )
               )
             : session.created_at;
           merged.updated_at = merged.updated_at
             ? new Date(
                 Math.max(
                   merged.updated_at.getTime(),
-                  session.updated_at.getTime(),
-                ),
+                  session.updated_at.getTime()
+                )
               )
             : session.updated_at;
           merged.effort = session.effort || merged.effort;
@@ -458,7 +458,7 @@ export function processSessionsByPatient(sessions: any[]): any[] {
           evaluation: null,
           has_chest: null,
           i_id: null,
-        },
+        }
       );
     })
     .map((session) => {
@@ -689,32 +689,32 @@ export function getTotalsOfSessions(sessions: any[]): SessionData {
 
   return {
     total_steps_automatic_forward: parseFloat(
-      total_steps_automatic_forward.toFixed(2),
+      total_steps_automatic_forward.toFixed(2)
     ),
     total_steps_automatic_backward: parseFloat(
-      total_steps_automatic_backward.toFixed(2),
+      total_steps_automatic_backward.toFixed(2)
     ),
     total_steps_intention_forward: parseFloat(
-      total_steps_intention_forward.toFixed(2),
+      total_steps_intention_forward.toFixed(2)
     ),
     total_steps_intention_backward: parseFloat(
-      total_steps_intention_backward.toFixed(2),
+      total_steps_intention_backward.toFixed(2)
     ),
     total_steps_automatic: parseFloat(total_steps_automatic.toFixed(2)),
     total_steps_intention: parseFloat(total_steps_intention.toFixed(2)),
     total_steps_forward: parseFloat(total_steps_forward.toFixed(2)),
     total_steps_backward: parseFloat(total_steps_backward.toFixed(2)),
     total_time_automatic_forward: parseFloat(
-      total_time_automatic_forward.toFixed(2),
+      total_time_automatic_forward.toFixed(2)
     ),
     total_time_automatic_backward: parseFloat(
-      total_time_automatic_backward.toFixed(2),
+      total_time_automatic_backward.toFixed(2)
     ),
     total_time_intentiton_forward: parseFloat(
-      total_time_intentiton_forward.toFixed(2),
+      total_time_intentiton_forward.toFixed(2)
     ),
     total_time_intention_backward: parseFloat(
-      total_time_intention_backward.toFixed(2),
+      total_time_intention_backward.toFixed(2)
     ),
     total_time_automatic: parseFloat(total_time_automatic.toFixed(2)),
     total_time_intention: parseFloat(total_time_intention.toFixed(2)),
@@ -731,59 +731,59 @@ export function getTotalsOfSessions(sessions: any[]): SessionData {
     median_evaluation: parseFloat(median_evaluation.toFixed(2)),
     median_total_steps: parseFloat(median_total_steps.toFixed(2)),
     median_total_steps_automatic_forward: parseFloat(
-      median_total_steps_automatic_forward.toFixed(2),
+      median_total_steps_automatic_forward.toFixed(2)
     ),
     median_total_steps_automatic_backward: parseFloat(
-      median_total_steps_automatic_backward.toFixed(2),
+      median_total_steps_automatic_backward.toFixed(2)
     ),
     median_total_steps_intention_forward: parseFloat(
-      median_total_steps_intention_forward.toFixed(2),
+      median_total_steps_intention_forward.toFixed(2)
     ),
     median_total_steps_intention_backward: parseFloat(
-      median_total_steps_intention_backward.toFixed(2),
+      median_total_steps_intention_backward.toFixed(2)
     ),
     median_total_steps_automatic: parseFloat(
-      median_total_steps_automatic.toFixed(2),
+      median_total_steps_automatic.toFixed(2)
     ),
     median_total_steps_intention: parseFloat(
-      median_total_steps_intention.toFixed(2),
+      median_total_steps_intention.toFixed(2)
     ),
     median_total_steps_forward: parseFloat(
-      median_total_steps_forward.toFixed(2),
+      median_total_steps_forward.toFixed(2)
     ),
     median_total_steps_backward: parseFloat(
-      median_total_steps_backward.toFixed(2),
+      median_total_steps_backward.toFixed(2)
     ),
     median_total_time: parseFloat(median_total_time.toFixed(2)),
     median_total_time_automatic_forward: parseFloat(
-      median_total_time_automatic_forward.toFixed(2),
+      median_total_time_automatic_forward.toFixed(2)
     ),
     median_total_time_automatic_backward: parseFloat(
-      median_total_time_automatic_backward.toFixed(2),
+      median_total_time_automatic_backward.toFixed(2)
     ),
     median_total_time_intentiton_forward: parseFloat(
-      median_total_time_intentiton_forward.toFixed(2),
+      median_total_time_intentiton_forward.toFixed(2)
     ),
     median_total_time_intention_backward: parseFloat(
-      median_total_time_intention_backward.toFixed(2),
+      median_total_time_intention_backward.toFixed(2)
     ),
     median_total_time_automatic: parseFloat(
-      median_total_time_automatic.toFixed(2),
+      median_total_time_automatic.toFixed(2)
     ),
     median_total_time_intention: parseFloat(
-      median_total_time_intention.toFixed(2),
+      median_total_time_intention.toFixed(2)
     ),
     median_total_time_forward: parseFloat(median_total_time_forward.toFixed(2)),
     median_total_time_backward: parseFloat(
-      median_total_time_backward.toFixed(2),
+      median_total_time_backward.toFixed(2)
     ),
     cadence_automatic_forward: parseFloat(cadence_automatic_forward.toFixed(2)),
     cadence_automatic_backward: parseFloat(
-      cadence_automatic_backward.toFixed(2),
+      cadence_automatic_backward.toFixed(2)
     ),
     cadence_intention_forward: parseFloat(cadence_intention_forward.toFixed(2)),
     cadence_intention_backward: parseFloat(
-      cadence_intention_backward.toFixed(2),
+      cadence_intention_backward.toFixed(2)
     ),
     flexos_hip: parseFloat(flexos_hip.toFixed(2)),
     flexos_knee: parseFloat(flexos_knee.toFixed(2)),
@@ -849,7 +849,7 @@ export function getStepGraph(
   t: TFunction<'translation', undefined>,
   window: any,
   legend: boolean,
-  inform?: boolean,
+  inform?: boolean
 ) {
   const dataStepsDistribution: ChartData = {
     labels: [
@@ -863,19 +863,19 @@ export function getStepGraph(
         data: [
           get_percentage(
             data.total_steps_automatic_forward,
-            data.total_steps_total,
+            data.total_steps_total
           ),
           get_percentage(
             data.total_steps_automatic_backward,
-            data.total_steps_total,
+            data.total_steps_total
           ),
           get_percentage(
             data.total_steps_intention_backward,
-            data.total_steps_total,
+            data.total_steps_total
           ),
           get_percentage(
             data.total_steps_intention_forward,
-            data.total_steps_total,
+            data.total_steps_total
           ),
         ],
         backgroundColor: [
@@ -1025,7 +1025,7 @@ export function getStepSessionGraph(
   documentStyle: CSSStyleDeclaration,
   t: TFunction<'translation', undefined>,
   window: any,
-  legend: boolean,
+  legend: boolean
 ) {
   const dataStepsLastSessionDistribution: ChartData = {
     labels: [
@@ -1116,7 +1116,7 @@ export function getStepGraphTime(
   data: SessionData,
   documentStyle: CSSStyleDeclaration,
   t: TFunction<'translation', undefined>,
-  window: any,
+  window: any
 ) {
   const dataStepsDistribution: ChartData = {
     labels: [
@@ -1130,19 +1130,19 @@ export function getStepGraphTime(
         data: [
           get_percentage(
             data.total_time_automatic_forward,
-            data.total_time_walking,
+            data.total_time_walking
           ),
           get_percentage(
             data.total_time_automatic_backward,
-            data.total_time_walking,
+            data.total_time_walking
           ),
           get_percentage(
             data.total_time_intention_backward,
-            data.total_time_walking,
+            data.total_time_walking
           ),
           get_percentage(
             data.total_time_intentiton_forward,
-            data.total_time_walking,
+            data.total_time_walking
           ),
         ],
         backgroundColor: [
@@ -1218,7 +1218,7 @@ export function getScoreGraph(
   data: any,
   documentStyle: CSSStyleDeclaration,
   t: TFunction<'translation', undefined>,
-  window: any,
+  window: any
 ) {
   const _sessions: sessions[] = data;
   // Sort by date
@@ -1231,7 +1231,7 @@ export function getScoreGraph(
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
-    }),
+    })
   );
 
   const dataScore: ChartData = {
@@ -1241,7 +1241,7 @@ export function getScoreGraph(
         label: t('pages.patients.viewPatient.sessions.score'),
         data: data.map((s: any) => s.evaluation),
         fill: false,
-        borderColor: '#004E78',
+        borderColor: '#C822FF',
         tension: 0,
         // @ts-ignore
         datalabels: {
@@ -1263,7 +1263,7 @@ export function getScoreGraph(
       // @ts-ignore
       datalabels: {
         display: showDisplayDataLabels(window?.innerWidth),
-        backgroundColor: '#004E78',
+        backgroundColor: '#C822FF',
         borderRadius: 50,
         color: 'white',
         font: {
@@ -1325,7 +1325,7 @@ export function getStepsDirectionGraph(
   t: TFunction<'translation', undefined>,
   textColorSecondary: string,
   textColor: string,
-  surfaceBorder: string,
+  surfaceBorder: string
 ) {
   const _sessions: sessions[] = data;
   // Sort by date
@@ -1338,14 +1338,14 @@ export function getStepsDirectionGraph(
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
-    }),
+    })
   );
   // Direction
   const direction_forward = _sessions.map(
-    (s) => s.steps_automatic_forward + s.steps_intention_forward,
+    (s) => s.steps_automatic_forward + s.steps_intention_forward
   );
   const direction_backward = _sessions.map(
-    (s) => s.steps_automatic_backward + s.steps_intention_backward,
+    (s) => s.steps_automatic_backward + s.steps_intention_backward
   );
 
   const dataStepsDirection: ChartData = {
@@ -1355,14 +1355,14 @@ export function getStepsDirectionGraph(
         label: t('forward'),
         data: direction_forward,
         fill: false,
-        borderColor: '#004E78',
+        borderColor: '#C822FF',
         tension: 0,
       },
       {
         label: t('backward'),
         data: direction_backward,
         fill: false,
-        borderColor: '#13DFB6',
+        borderColor: '#6C1AFF',
         tension: 0,
       },
     ],
@@ -1425,7 +1425,7 @@ export function getDataStepsMode(
   t: TFunction<'translation', undefined>,
   textColorSecondary: string,
   textColor: string,
-  surfaceBorder: string,
+  surfaceBorder: string
 ) {
   const _sessions: sessions[] = data;
   // Sort by date
@@ -1438,14 +1438,14 @@ export function getDataStepsMode(
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
-    }),
+    })
   );
   // Mode
   const mode_automatic = _sessions.map(
-    (s) => s.steps_automatic_backward + s.steps_automatic_forward,
+    (s) => s.steps_automatic_backward + s.steps_automatic_forward
   );
   const mode_intention = _sessions.map(
-    (s) => s.steps_intention_backward + s.steps_intention_forward,
+    (s) => s.steps_intention_backward + s.steps_intention_forward
   );
 
   const dataStepsMode: ChartData = {
@@ -1455,14 +1455,14 @@ export function getDataStepsMode(
         label: t('automatic'),
         data: mode_automatic,
         fill: false,
-        borderColor: '#004E78',
+        borderColor: '#C822FF',
         tension: 0,
       },
       {
         label: t('intention'),
         data: mode_intention,
         fill: false,
-        borderColor: '#13DFB6',
+        borderColor: '#6C1AFF',
         tension: 0,
       },
     ],
@@ -1525,7 +1525,7 @@ export function getDataTimeDirectionGraphq(
   t: TFunction<'translation', undefined>,
   textColorSecondary: string,
   textColor: string,
-  surfaceBorder: string,
+  surfaceBorder: string
 ) {
   const _sessions: sessions[] = data;
   // Sort by date
@@ -1538,14 +1538,14 @@ export function getDataTimeDirectionGraphq(
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
-    }),
+    })
   );
   // Direction
   const direction_forward = _sessions.map(
-    (s) => s.time_automatic_forward + s.time_intentiton_forward,
+    (s) => s.time_automatic_forward + s.time_intentiton_forward
   );
   const direction_backward = _sessions.map(
-    (s) => s.time_automatic_backward + s.time_intention_backward,
+    (s) => s.time_automatic_backward + s.time_intention_backward
   );
 
   const dataTimeDirection: ChartData = {
@@ -1555,14 +1555,14 @@ export function getDataTimeDirectionGraphq(
         label: t('forward'),
         data: direction_forward,
         fill: false,
-        borderColor: '#004E78',
+        borderColor: '#C822FF',
         tension: 0,
       },
       {
         label: t('backward'),
         data: direction_backward,
         fill: false,
-        borderColor: '#13DFB6',
+        borderColor: '#6C1AFF',
         tension: 0,
       },
     ],
@@ -1625,7 +1625,7 @@ export function getDataTimeMode(
   t: TFunction<'translation', undefined>,
   textColorSecondary: string,
   textColor: string,
-  surfaceBorder: string,
+  surfaceBorder: string
 ) {
   const _sessions: sessions[] = data;
   // Sort by date
@@ -1638,14 +1638,14 @@ export function getDataTimeMode(
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
-    }),
+    })
   );
   // Mode
   const mode_automatic = _sessions.map(
-    (s) => s.time_automatic_backward + s.time_automatic_forward,
+    (s) => s.time_automatic_backward + s.time_automatic_forward
   );
   const mode_intention = _sessions.map(
-    (s) => s.time_intention_backward + s.time_intentiton_forward,
+    (s) => s.time_intention_backward + s.time_intentiton_forward
   );
 
   const dataTimeMode: ChartData = {
@@ -1655,14 +1655,14 @@ export function getDataTimeMode(
         label: t('automatic'),
         data: mode_automatic,
         fill: false,
-        borderColor: '#004E78',
+        borderColor: '#C822FF',
         tension: 0,
       },
       {
         label: t('intention'),
         data: mode_intention,
         fill: false,
-        borderColor: '#13DFB6',
+        borderColor: '#6C1AFF',
         tension: 0,
       },
     ],
@@ -1725,7 +1725,7 @@ export function getDataCadenceDirectionGraph(
   t: TFunction<'translation', undefined>,
   textColorSecondary: string,
   textColor: string,
-  surfaceBorder: string,
+  surfaceBorder: string
 ) {
   const _sessions: sessions[] = data;
   // Sort by date
@@ -1738,14 +1738,14 @@ export function getDataCadenceDirectionGraph(
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
-    }),
+    })
   );
   // Direction
   const direction_forward = _sessions.map(
-    (s) => s.cadence_automatic_forward + s.cadence_intention_forward,
+    (s) => s.cadence_automatic_forward + s.cadence_intention_forward
   );
   const direction_backward = _sessions.map(
-    (s) => s.cadence_automatic_backward + s.cadence_intention_backward,
+    (s) => s.cadence_automatic_backward + s.cadence_intention_backward
   );
 
   const dataCadenceDirection: ChartData = {
@@ -1755,14 +1755,14 @@ export function getDataCadenceDirectionGraph(
         label: t('forward'),
         data: direction_forward,
         fill: false,
-        borderColor: '#004E78',
+        borderColor: '#C822FF',
         tension: 0,
       },
       {
         label: t('backward'),
         data: direction_backward,
         fill: false,
-        borderColor: '#13DFB6',
+        borderColor: '#6C1AFF',
         tension: 0,
       },
     ],
@@ -1824,7 +1824,7 @@ export function getDataCadenceModeGraph(
   t: TFunction<'translation', undefined>,
   textColorSecondary: string,
   textColor: string,
-  surfaceBorder: string,
+  surfaceBorder: string
 ) {
   const _sessions: sessions[] = data;
   // Sort by date
@@ -1837,14 +1837,14 @@ export function getDataCadenceModeGraph(
       day: '2-digit',
       month: '2-digit',
       year: 'numeric',
-    }),
+    })
   );
   // Direction
   const mode_automatic = _sessions.map(
-    (s) => s.cadence_automatic_backward + s.cadence_automatic_forward,
+    (s) => s.cadence_automatic_backward + s.cadence_automatic_forward
   );
   const mode_intention = _sessions.map(
-    (s) => s.cadence_intention_backward + s.cadence_intention_forward,
+    (s) => s.cadence_intention_backward + s.cadence_intention_forward
   );
 
   const dataCadenceMode: ChartData = {
@@ -1854,14 +1854,14 @@ export function getDataCadenceModeGraph(
         label: t('automatic'),
         data: mode_automatic,
         fill: false,
-        borderColor: '#004E78',
+        borderColor: '#C822FF',
         tension: 0,
       },
       {
         label: t('intention'),
         data: mode_intention,
         fill: false,
-        borderColor: '#13DFB6',
+        borderColor: '#6C1AFF',
         tension: 0,
       },
     ],
@@ -1950,7 +1950,7 @@ export function getSessionsByMonth(sessions: any[]) {
     const month = date.getMonth();
     const month_string = date;
     const session_by_month = sessions_by_month.find(
-      (session_by_month) => session_by_month.month === month,
+      (session_by_month) => session_by_month.month === month
     );
     if (session_by_month) {
       session_by_month.sessions.push(session);
@@ -1976,30 +1976,30 @@ export function getSessionsByMonth(sessions: any[]) {
 export function getNumberOfStepMode(
   data: any,
   documentStyle: CSSStyleDeclaration,
-  t: TFunction<'translation', undefined>,
+  t: TFunction<'translation', undefined>
 ) {
   const sessionByMonth = getSessionsByMonth(data);
   const labels = sessionByMonth.map((s) =>
     // Format date to dd/mm/yyyy
     new Date(s.month_string).toLocaleDateString('es-ES', {
       month: 'short',
-    }),
+    })
   );
 
   const steps_intention_forward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.steps_intention_forward, 0),
+    s.sessions.reduce((a, b) => a + b.steps_intention_forward, 0)
   );
 
   const steps_automatic_forward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.steps_automatic_forward, 0),
+    s.sessions.reduce((a, b) => a + b.steps_automatic_forward, 0)
   );
 
   const steps_intention_backward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.steps_intention_backward, 0),
+    s.sessions.reduce((a, b) => a + b.steps_intention_backward, 0)
   );
 
   const steps_automatic_backward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.steps_automatic_backward, 0),
+    s.sessions.reduce((a, b) => a + b.steps_automatic_backward, 0)
   );
 
   const dataNumberOfSteps: ChartData = {
@@ -2008,13 +2008,13 @@ export function getNumberOfStepMode(
       {
         label: t('pages.reports.graphs.forwardIntention'),
         data: steps_intention_forward,
-        backgroundColor: ['#004E78'],
+        backgroundColor: ['#C822FF'],
         borderWidth: 1,
       },
       {
         label: t('pages.reports.graphs.automaticForward'),
         data: steps_automatic_forward,
-        backgroundColor: ['#13DFB6'],
+        backgroundColor: ['#6C1AFF'],
         borderWidth: 1,
       },
       {
@@ -2071,30 +2071,30 @@ export function getNumberOfStepMode(
 export function getNumberOfStepDirection(
   data: any,
   documentStyle: CSSStyleDeclaration,
-  t: TFunction<'translation', undefined>,
+  t: TFunction<'translation', undefined>
 ) {
   const sessionByMonth = getSessionsByMonth(data);
   const labels = sessionByMonth.map((s) =>
     // Format date to dd/mm/yyyy
     new Date(s.month_string).toLocaleDateString('es-ES', {
       month: 'short',
-    }),
+    })
   );
 
   const steps_intention_forward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.steps_intention_forward, 0),
+    s.sessions.reduce((a, b) => a + b.steps_intention_forward, 0)
   );
 
   const steps_automatic_forward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.steps_automatic_forward, 0),
+    s.sessions.reduce((a, b) => a + b.steps_automatic_forward, 0)
   );
 
   const steps_intention_backward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.steps_intention_backward, 0),
+    s.sessions.reduce((a, b) => a + b.steps_intention_backward, 0)
   );
 
   const steps_automatic_backward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.steps_automatic_backward, 0),
+    s.sessions.reduce((a, b) => a + b.steps_automatic_backward, 0)
   );
 
   const dataNumberOfStepsDirection: ChartData = {
@@ -2103,13 +2103,13 @@ export function getNumberOfStepDirection(
       {
         label: t('pages.reports.graphs.forwardIntention'),
         data: steps_intention_forward,
-        backgroundColor: ['#004E78'],
+        backgroundColor: ['#C822FF'],
         borderWidth: 1,
       },
       {
         label: t('pages.reports.graphs.automaticForward'),
         data: steps_automatic_forward,
-        backgroundColor: ['#13DFB6'],
+        backgroundColor: ['#6C1AFF'],
         borderWidth: 1,
       },
       {
@@ -2166,30 +2166,30 @@ export function getNumberOfStepDirection(
 export function getNumberOfTimeMode(
   data: any,
   documentStyle: CSSStyleDeclaration,
-  t: TFunction<'translation', undefined>,
+  t: TFunction<'translation', undefined>
 ) {
   const sessionByMonth = getSessionsByMonth(data);
   const labels = sessionByMonth.map((s) =>
     // Format date to dd/mm/yyyy
     new Date(s.month_string).toLocaleDateString('es-ES', {
       month: 'short',
-    }),
+    })
   );
 
   const time_intention_forward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.time_intentiton_forward, 0),
+    s.sessions.reduce((a, b) => a + b.time_intentiton_forward, 0)
   );
 
   const time_automatic_forward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.time_automatic_forward, 0),
+    s.sessions.reduce((a, b) => a + b.time_automatic_forward, 0)
   );
 
   const time_intention_backward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.time_intention_backward, 0),
+    s.sessions.reduce((a, b) => a + b.time_intention_backward, 0)
   );
 
   const time_automatic_backward = sessionByMonth.map((s) =>
-    s.sessions.reduce((a, b) => a + b.time_automatic_backward, 0),
+    s.sessions.reduce((a, b) => a + b.time_automatic_backward, 0)
   );
 
   const dataNumberOfTime: ChartData = {
@@ -2198,13 +2198,13 @@ export function getNumberOfTimeMode(
       {
         label: t('pages.reports.graphs.forwardIntention'),
         data: time_intention_forward,
-        backgroundColor: ['#004E78'],
+        backgroundColor: ['#C822FF'],
         borderWidth: 1,
       },
       {
         label: t('pages.reports.graphs.automaticForward'),
         data: time_automatic_forward,
-        backgroundColor: ['#13DFB6'],
+        backgroundColor: ['#6C1AFF'],
         borderWidth: 1,
       },
       {
@@ -2263,7 +2263,7 @@ export function getTotalSteps(
   documentStyle: CSSStyleDeclaration,
   t: TFunction<'translation', undefined>,
   surfaceBorder: string,
-  textColorSecondary: string,
+  textColorSecondary: string
 ) {
   const sessionByMonth = getSessionsByMonth(data);
 
@@ -2292,12 +2292,12 @@ export function getTotalSteps(
 
       return result;
     },
-    {},
+    {}
   );
 
   // Obtener etiquetas y datos sumarizados y ordenarlos
   const sortedEntries = Object.entries(sessionsByDay).sort(
-    (a, b) => new Date(a[0]).getTime() - new Date(b[0]).getTime(),
+    (a, b) => new Date(a[0]).getTime() - new Date(b[0]).getTime()
   );
   const labels = sortedEntries.map(([dateKey]) => dateKey);
   const total_data = sortedEntries.map(([_, total]) => total);
@@ -2308,7 +2308,7 @@ export function getTotalSteps(
       {
         data: total_data,
         fill: false,
-        borderColor: '#13DFB6',
+        borderColor: '#6C1AFF',
         tension: 0,
         // @ts-ignore
         datalabels: {
@@ -2394,7 +2394,7 @@ export function getTotalTime(
   documentStyle: CSSStyleDeclaration,
   t: TFunction<'translation', undefined>,
   surfaceBorder: string,
-  textColorSecondary: string,
+  textColorSecondary: string
 ) {
   const sessionByMonth = getSessionsByMonth(data);
 
@@ -2418,12 +2418,12 @@ export function getTotalTime(
 
       return result;
     },
-    {},
+    {}
   );
 
   // Obtener etiquetas y datos sumarizados y ordenarlos
   const sortedEntries = Object.entries(sessionsByDay).sort(
-    (a, b) => new Date(a[0]).getTime() - new Date(b[0]).getTime(),
+    (a, b) => new Date(a[0]).getTime() - new Date(b[0]).getTime()
   );
   const labels = sortedEntries.map(([dateKey]) => dateKey);
   const total_data = sortedEntries.map(([_, total]) => total);
@@ -2434,7 +2434,7 @@ export function getTotalTime(
       {
         data: total_data,
         fill: false,
-        borderColor: '#004E78',
+        borderColor: '#C822FF',
         tension: 0,
         // @ts-ignore
         datalabels: {

@@ -68,7 +68,7 @@ const DateRangePicker: React.FC<DateRangePickerProps> = ({
                 width: '6px',
                 height: '6px',
                 borderRadius: '50%',
-                backgroundColor: '#004e78',
+                backgroundColor: '#C822FF',
                 marginBottom: '10px',
                 marginLeft: isDayGreaterThanTen(date.day) ? '5px' : '2px',
               }}

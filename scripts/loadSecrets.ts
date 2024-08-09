@@ -34,7 +34,7 @@ async function loadSecrets() {
     try {
       const secretValue = await keyVaultService.getSecret(secretName);
       console.log(
-        `Loaded secret ${secretName}: ${secretValue ? 'success' : 'failure'}`,
+        `Loaded secret ${secretName}: ${secretValue ? 'success' : 'failure'}`
       );
       process.env[secretName] = secretValue;
       envStream.write(`\n${secretName}=${secretValue}\n`); // Añadir un salto de línea antes de escribir

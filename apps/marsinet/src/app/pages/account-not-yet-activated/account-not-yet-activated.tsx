@@ -27,8 +27,8 @@ export function AccountNotYetActivated(props: AccountNotYetActivatedProps) {
           <div className="border-round-2xl text-center surface-ground">
             <span className="surface-ground text-red-500 font-bold text-3xl inline-block px-3">
               <img
-                src="/assets/marsi-azul-degradado-fondo-blanco.png"
-                alt="logo marsinet"
+                src="/assets/icons8-laravel-96.png"
+                alt="logo"
                 style={{ width: '193px' }}
               />
             </span>

@@ -53,7 +53,7 @@ export function SessionSummaryBar(props: SessionSummaryBarProps) {
           </div>
           <img
             className="w-3rem text-center md:mr-2"
-            src="assets/steps-marsinet.png"
+            src="assets/icons8-footprint-80.png"
             alt="steps marsinet"
           />
           <div className=" text-center">
@@ -80,7 +80,7 @@ export function SessionSummaryBar(props: SessionSummaryBarProps) {
         <div className="p-2 flex flex-column md:flex-row justify-content-center align-items-center gap-3">
           <img
             className="w-3rem mr-2"
-            src="assets/clock-marsinet.png"
+            src="assets/icons8-clock-100.png"
             alt="clock marsinet"
           />
           <div className="t ">
