@@ -260,7 +260,7 @@ export function Register(props: RegisterProps) {
         {!loading && (
           <div className="lg:max-width flex justify-content-center pt-8">
             <div className="px-2 mx-2 w-full md:w-11 lg:w-9 xl:w-7 lg:px-4 surface-100 shadow-2 text-center border-round-3xl relative">
-              {/* Logo Marsinet */}
+              {/* Logo */}
               <div className="absolute position-icon">
                 <Button
                   rounded

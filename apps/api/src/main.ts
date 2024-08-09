@@ -50,9 +50,9 @@ async function bootstrap() {
 
   // Swagger
   const config = new DocumentBuilder()
-    .setTitle('Marsinet')
-    .setDescription('The marsinet API description')
-    .setVersion('2.1.1')
+    .setTitle('MyPP')
+    .setDescription('The MyPP API description')
+    .setVersion('0.0.1')
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, config);
