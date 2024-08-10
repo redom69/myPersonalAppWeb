@@ -17,8 +17,8 @@ import {
 } from './dto/dto';
 import { UserTokenDto } from '../my-account/dto/dto';
 
-import { prisma } from '@marsinet/server';
-import { processSessions } from '@marsinet/commons';
+import { prisma } from '@mypaw/server';
+import { processSessions } from '@mypaw/commons';
 
 @Injectable()
 export class PatientService {

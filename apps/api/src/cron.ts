@@ -1,4 +1,4 @@
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 import { IngestionService } from './app/ingestion/ingestion.service';
 
 const ingestionService = new IngestionService();

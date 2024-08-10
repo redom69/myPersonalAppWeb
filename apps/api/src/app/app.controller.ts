@@ -18,7 +18,7 @@ import {
   ApiBody,
   ApiParam,
 } from '@nestjs/swagger';
-import { refreshAccessToken } from '@marsinet/server';
+import { refreshAccessToken } from '@mypaw/server';
 
 @ApiTags('User not authenticated')
 @Controller()

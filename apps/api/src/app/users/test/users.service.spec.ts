@@ -1,13 +1,13 @@
 import { HttpException } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 
-import { prisma, sendWelcomeEmailToUser } from '@marsinet/server';
+import { prisma, sendWelcomeEmailToUser } from '@mypaw/server';
 
 import { UsersService } from '../users.service';
 import { ToggleUserActiveDto } from '../dto/user.dto';
 import { UserTokenDto } from '../../my-account/dto/dto';
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   prisma: {
     organizations: {
       findFirst: jest.fn(),

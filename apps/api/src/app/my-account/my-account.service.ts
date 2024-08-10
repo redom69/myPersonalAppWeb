@@ -2,7 +2,7 @@ import {
   get_if_organization_has_premium,
   prisma,
   user_is_active,
-} from '@marsinet/server';
+} from '@mypaw/server';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import {
   GetMenuInfo,

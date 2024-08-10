@@ -7,14 +7,9 @@ import {
   RequestResetPasswordDto,
   ResetPasswordDto,
 } from '../app.dtos';
-import {
-  User,
-  prisma,
-  sendEmailToAdmin,
-  verifyAccount,
-} from '@marsinet/server';
+import { User, prisma, sendEmailToAdmin, verifyAccount } from '@mypaw/server';
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   User: {
     login: jest.fn(),
     create_token: jest.fn(),

@@ -2,7 +2,7 @@ import {
   generate_reset_token_password_and_send_email_new_admin_clinic,
   hash_password,
   prisma,
-} from '@marsinet/server';
+} from '@mypaw/server';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import {
   CreateOrganization,

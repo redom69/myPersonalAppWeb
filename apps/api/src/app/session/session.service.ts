@@ -1,7 +1,7 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { Session } from './dto/session.dto';
-import { prisma } from '@marsinet/server';
-import { processSessionsByPatient } from '@marsinet/commons';
+import { prisma } from '@mypaw/server';
+import { processSessionsByPatient } from '@mypaw/commons';
 
 @Injectable()
 export class SessionService {

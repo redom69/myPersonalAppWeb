@@ -10,12 +10,7 @@ import {
   ResetPasswordDto,
   ResetPasswordResponseDto,
 } from './app.dtos';
-import {
-  User,
-  prisma,
-  sendEmailToAdmin,
-  verifyAccount,
-} from '@marsinet/server';
+import { User, prisma, sendEmailToAdmin, verifyAccount } from '@mypaw/server';
 
 @Injectable()
 export class AppService {

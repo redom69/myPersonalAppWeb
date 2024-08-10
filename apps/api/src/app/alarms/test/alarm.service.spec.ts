@@ -4,10 +4,10 @@ import { HttpException, NotFoundException } from '@nestjs/common';
 import { AlarmService } from '../alarms.service';
 import { Alarm, UpdateAlarm } from '../dto/alarms.dto';
 
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 
 // Mocking prisma
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   prisma: {
     alarms: {
       create: jest.fn(),

@@ -9,7 +9,7 @@ import {
   UpdateActiveDeviceDto,
   UpdateDeviceDto,
 } from './dto/update-device.dto';
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 import { UserTokenDto } from '../my-account/dto/dto';
 import { Prisma } from '@prisma/client';
 import { Organization } from '../admin/dto/dto';

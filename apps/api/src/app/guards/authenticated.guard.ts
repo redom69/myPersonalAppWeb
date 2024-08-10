@@ -6,7 +6,7 @@ import {
   createParamDecorator,
 } from '@nestjs/common';
 
-import { verify_token } from '@marsinet/server';
+import { verify_token } from '@mypaw/server';
 
 @Injectable()
 export class AuthenticatedGuard implements CanActivate {

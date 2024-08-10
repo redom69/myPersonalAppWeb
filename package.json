@@ -1,17 +1,17 @@
 {
-  "name": "@marsinet/source",
-  "version": "2.1.1",
+  "name": "my-personal-app-web",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "load-secrets": "ts-node scripts/loadSecrets.ts",
     "prettier": "cd apps && npx prettier --write '**/*.{ts,tsx,js,jsx,json,css,md}'",
     "lint": "npx eslint '**/*.{ts,tsx,js,jsx}' --fix  ",
     "coverage-api": "nx test api --bail --coverage",
-    "coverage-marsinet": "nx test marsinet --bail --coverage",
+    "coverage-mypaw": "nx test mypaw --bail --coverage",
     "test": "npx jest",
-    "test:e2e": "cd apps/marsinet-e2e && npx cypress run --record --key 295c37ea-5d66-47ca-a074-1e63e1fd5403",
-    "test:e2e:open": "cd apps/marsinet-e2e && npx cypress open",
-    "ci-cd": "npm ci && npx prettier --check 'apps/api/**/*.{ts,tsx,js,jsx,json,css,md}' && npx prettier --check 'apps/marsinet/**/*.{ts,tsx,js,jsx,json,css,md}' && npx nx lint api && npx nx lint marsinet && [ -d 'apps/api' ] && (cd apps/api && npx jest) && [ -d 'apps/marsinet' ] && (cd apps/marsinet && npx jest)"
+    "test:e2e": "cd apps/mypaw-e2e && npx cypress run --record --key 295c37ea-5d66-47ca-a074-1e63e1fd5403",
+    "test:e2e:open": "cd apps/mypaw-e2e && npx cypress open",
+    "ci-cd": "npm ci && npx prettier --check 'apps/api/**/*.{ts,tsx,js,jsx,json,css,md}' && npx prettier --check 'apps/mypaw/**/*.{ts,tsx,js,jsx,json,css,md}' && npx nx lint api && npx nx lint mypaw && [ -d 'apps/api' ] && (cd apps/api && npx jest) && [ -d 'apps/mypaw' ] && (cd apps/mypaw && npx jest)"
   },
   "private": true,
   "devDependencies": {

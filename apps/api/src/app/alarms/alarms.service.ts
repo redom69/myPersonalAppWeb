@@ -4,7 +4,7 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 
 import { Alarm, UpdateAlarm } from './dto/alarms.dto';
 

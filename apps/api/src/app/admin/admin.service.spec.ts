@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { AdminService } from './admin.service';
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 import {
   CreateOrganization,
   UpdateOrganizationDto,
@@ -9,7 +9,7 @@ import {
 } from './dto/dto';
 import { HttpException } from '@nestjs/common';
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   prisma: {
     organizations: {
       findMany: jest.fn(),

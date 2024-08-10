@@ -1,6 +1,6 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 
-import { prisma, sendWelcomeEmailToUser } from '@marsinet/server';
+import { prisma, sendWelcomeEmailToUser } from '@mypaw/server';
 
 import { ToggleUserActiveDto, UserTable } from './dto/user.dto';
 import { UserTokenDto } from '../my-account/dto/dto';

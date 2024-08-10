@@ -16,14 +16,14 @@
         "api-e2e/**/*.tsx",
         "api-e2e/**/*.js",
         "api-e2e/**/*.jsx",
-        "marsinet/**/*.ts",
-        "marsinet/**/*.tsx",
-        "marsinet/**/*.js",
-        "marsinet/**/*.jsx",
-        "marsinet-e2e/**/*.ts",
-        "marsinet-e2e/**/*.tsx",
-        "marsinet-e2e/**/*.js",
-        "marsinet-e2e/**/*.jsx"
+        "mypaw/**/*.ts",
+        "mypaw/**/*.tsx",
+        "mypaw/**/*.js",
+        "mypaw/**/*.jsx",
+        "mypaw-e2e/**/*.ts",
+        "mypaw-e2e/**/*.tsx",
+        "mypaw-e2e/**/*.js",
+        "mypaw-e2e/**/*.jsx"
       ],
       "rules": {
         "@nx/enforce-module-boundaries": [

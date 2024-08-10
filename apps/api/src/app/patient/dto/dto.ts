@@ -1,4 +1,4 @@
-import { COUNTRIES_CODE } from '@marsinet/commons';
+import { COUNTRIES_CODE } from '@mypaw/commons';
 import { ApiProperty, PartialType } from '@nestjs/swagger';
 import {
   IsArray,

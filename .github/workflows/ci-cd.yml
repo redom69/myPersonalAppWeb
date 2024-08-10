@@ -33,35 +33,22 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Set NX Cloud Access Token
-        run: echo "NX_CLOUD_ACCESS_TOKEN=${{ secrets.NX_CLOUD_ACCESS_TOKEN }}" >> $GITHUB_ENV
-
-      - name: Set SHAs for Nx
-        uses: nrwl/nx-set-shas@v4
-
       - name: Check Prettier formatting
         run: |
           npx prettier --check 'apps/api/**/*.{ts,tsx,js,jsx,json,css,md}'
-          npx prettier --check 'apps/marsinet/**/*.{ts,tsx,js,jsx,json,css,md}'
-
-      - name: Record Nx Format Check
-        run: npx nx-cloud record -- nx format:check
+          npx prettier --check 'apps/mypaw/**/*.{ts,tsx,js,jsx,json,css,md}'
 
       - name: Run Lint
         run: |
-          npx nx-cloud record -- nx lint api
-          npx nx-cloud record -- nx lint marsinet
+          npx nx lint api
+          npx  nx lint mypaw
 
       - name: Run Tests
         run: |
           cd apps/api && npx jest
-          cd ../marsinet && npx jest
+          cd ../mypaw && npx jest
 
       - name: Build Projects
         run: |
           npx nx-cloud record -- nx build api --skip-nx-cache --max-workers=1 --prod
-          npx nx-cloud record -- nx build marsinet --skip-nx-cache --max-workers=1 --prod
-
-      #- name: Run e2e test for marsinet
-      # run: |
-      #  npx nx-cloud record -- nx e2e marsinet-e2e
+          npx nx-cloud record -- nx build mypaw --skip-nx-cache --max-workers=1 --prod

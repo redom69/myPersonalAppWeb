@@ -12,10 +12,10 @@ import {
 } from '../dto/dto';
 import { UserTokenDto } from '../../my-account/dto/dto';
 
-import { prisma } from '@marsinet/server';
-import { processSessions } from '@marsinet/commons';
+import { prisma } from '@mypaw/server';
+import { processSessions } from '@mypaw/commons';
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   prisma: {
     $transaction: jest.fn(),
     patients: {
@@ -56,7 +56,7 @@ jest.mock('@marsinet/server', () => ({
   },
 }));
 
-jest.mock('@marsinet/commons', () => ({
+jest.mock('@mypaw/commons', () => ({
   processSessions: jest.fn(),
 }));
 

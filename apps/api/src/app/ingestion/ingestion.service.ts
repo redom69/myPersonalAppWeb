@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import * as checkVersion from '../../utils/checkVersion.js';
 import { BlobServiceClient } from '@azure/storage-blob';

@@ -10,13 +10,13 @@ import {
   OrganizationDto,
 } from '../app.dtos';
 
-import { refreshAccessToken } from '@marsinet/server';
+import { refreshAccessToken } from '@mypaw/server';
 
 jest.mock('@sendgrid/mail', () => ({
   setApiKey: jest.fn(),
 }));
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   refreshAccessToken: jest.fn(),
 }));
 

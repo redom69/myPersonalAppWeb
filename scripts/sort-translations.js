@@ -22,11 +22,11 @@ function sortTranslations(filePath) {
 
   // Extraer el objeto de traducciones
   const translationsMatch = translationsContent.match(
-    /const \w+ = ({[\s\S]*?});/,
+    /const \w+ = ({[\s\S]*?});/
   );
   if (!translationsMatch) {
     throw new Error(
-      `No se pudo encontrar el objeto de traducciones en ${filePath}`,
+      `No se pudo encontrar el objeto de traducciones en ${filePath}`
     );
   }
 
@@ -40,13 +40,13 @@ function sortTranslations(filePath) {
   const sortedTranslationsObjectString = JSON.stringify(
     sortedTranslationsObject,
     null,
-    2,
+    2
   ).replace(/"([^"]+)":/g, '$1:');
 
   // Sobrescribir el archivo con las entradas ordenadas
   const sortedTranslationsContent = translationsContent.replace(
     translationsObjectString,
-    sortedTranslationsObjectString,
+    sortedTranslationsObjectString
   );
   fs.writeFileSync(filePath, sortedTranslationsContent, 'utf-8');
 
@@ -55,12 +55,12 @@ function sortTranslations(filePath) {
 
 // Rutas a los archivos de traducciones
 const enTranslationsPath = path.join(
-  '/Users/daniel-hdez/Documents/marsinet/apps/marsinet/src/assets/i18n',
-  'en.ts',
+  '/Users/daniel-hdez/Documents/mypaw/apps/mypaw/src/assets/i18n',
+  'en.ts'
 );
 const esTranslationsPath = path.join(
-  '/Users/daniel-hdez/Documents/marsinet/apps/marsinet/src/assets/i18n',
-  'es.ts',
+  '/Users/daniel-hdez/Documents/mypaw/apps/mypaw/src/assets/i18n',
+  'es.ts'
 );
 
 // Ordenar las traducciones en ambos archivos

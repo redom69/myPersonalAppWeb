@@ -1,9 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ExecutionContext, ForbiddenException } from '@nestjs/common';
 import { AuthenticatedGuard, GetUser } from '../authenticated.guard';
-import { verify_token } from '@marsinet/server';
+import { verify_token } from '@mypaw/server';
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   verify_token: jest.fn(),
 }));
 

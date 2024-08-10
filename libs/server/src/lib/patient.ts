@@ -1,10 +1,10 @@
-import { getTotalsOfSessions } from '@marsinet/commons';
+import { getTotalsOfSessions } from '@mypaw/commons';
 import { prisma } from './utils';
 
 export async function get_patient_report(
   patient_id: string,
   start: string,
-  end: string,
+  end: string
 ): Promise<any> {
   const patient = await prisma.patients.findFirstOrThrow({
     where: { p_id: patient_id },
@@ -49,7 +49,7 @@ export async function get_patient_report(
         // cadence_intention_forward: s.cadence_intention_forward,
         // cadence_intention_backward: s.cadence_intention_backward,
       };
-    }),
+    })
   );
 
   return {

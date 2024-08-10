@@ -1,10 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { SessionService } from '../session.service';
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 import { HttpException } from '@nestjs/common';
-import { processSessionsByPatient } from '@marsinet/commons';
+import { processSessionsByPatient } from '@mypaw/commons';
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   prisma: {
     devices: {
       findFirst: jest.fn(),
@@ -18,7 +18,7 @@ jest.mock('@marsinet/server', () => ({
   },
 }));
 
-jest.mock('@marsinet/commons', () => ({
+jest.mock('@mypaw/commons', () => ({
   processSessions: jest.fn(),
   processSessionsByPatient: jest.fn(),
 }));

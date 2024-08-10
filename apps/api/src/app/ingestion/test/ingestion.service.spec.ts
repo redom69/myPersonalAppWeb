@@ -18,7 +18,7 @@ import {
   processCsv,
 } from '../ingestion.service';
 
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 import { BlobServiceClient } from '@azure/storage-blob';
 
 jest.mock('@azure/storage-blob', () => ({
@@ -73,7 +73,7 @@ jest.mock('adm-zip', () => {
 });
 
 jest.mock('fs');
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   prisma: {
     ingestion: {
       create: jest.fn(),

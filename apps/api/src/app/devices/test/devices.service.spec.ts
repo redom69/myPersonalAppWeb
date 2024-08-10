@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { DevicesService } from '../devices.service';
-import { prisma } from '@marsinet/server';
+import { prisma } from '@mypaw/server';
 import { HttpException, NotFoundException } from '@nestjs/common';
 import { CreateDeviceDto } from '../dto/create-device.dto';
 import {
@@ -10,7 +10,7 @@ import {
 import { UserTokenDto } from '../../my-account/dto/dto';
 import { Prisma } from '@prisma/client';
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   prisma: {
     organizations: {
       findUnique: jest.fn(),

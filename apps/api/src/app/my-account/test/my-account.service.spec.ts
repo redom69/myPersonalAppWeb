@@ -16,9 +16,9 @@ import {
   prisma,
   get_if_organization_has_premium,
   user_is_active,
-} from '@marsinet/server';
+} from '@mypaw/server';
 
-jest.mock('@marsinet/server', () => ({
+jest.mock('@mypaw/server', () => ({
   prisma: {
     user: {
       findFirstOrThrow: jest.fn(),

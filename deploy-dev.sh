@@ -8,16 +8,16 @@ NODE_OPTIONS="--max-old-space-size=512" npm ci --prefer-offline
 npx prisma generate
 
 # Construir aplicaciones con Nx para producción, limitando el uso de RAM
-NODE_OPTIONS="--max-old-space-size=512" nx build marsinet --skip-nx-cache --max-workers=1 --prod
+NODE_OPTIONS="--max-old-space-size=512" nx build mypaw --skip-nx-cache --max-workers=1 --prod
 NODE_OPTIONS="--max-old-space-size=512" nx build api --skip-nx-cache --max-workers=1 --prod
 # Construir aplicaciones con Nx
-nx build marsinet --skip-nx-cache --max-workers=1 --parallel --prod;
+nx build mypaw --skip-nx-cache --max-workers=1 --parallel --prod;
 nx build api --skip-nx-cache --max-workers=1 --parallel --prod;
 
 # Desplegar archivos compilados
-sudo rm -rf /usr/share/nginx/html/develop.marsinet.com/;
-sudo mkdir -p /usr/share/nginx/html/develop.marsinet.com;
-sudo mv dist/apps/marsinet/* /usr/share/nginx/html/develop.marsinet.com/;
+sudo rm -rf /usr/share/nginx/html/develop.mypaw.com/;
+sudo mkdir -p /usr/share/nginx/html/develop.mypaw.com;
+sudo mv dist/apps/mypaw/* /usr/share/nginx/html/develop.mypaw.com/;
 
 # Reiniciar la API con PM2
 pm2 delete api-develop || true; # Ignorar si el proceso no existe

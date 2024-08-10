@@ -1,12 +1,12 @@
 import { useTranslation } from 'react-i18next';
-import { ComparativeTableOfLastSessionDataAgainstHistoricalAndLatestMonthlyDataInterface } from '@marsinet/commons';
+import { ComparativeTableOfLastSessionDataAgainstHistoricalAndLatestMonthlyDataInterface } from '@mypaw/commons';
 
 export interface ComparativeTableOfLastSessionDataAgainstHistoricalAndLatestMonthlyDataProps {
   data: ComparativeTableOfLastSessionDataAgainstHistoricalAndLatestMonthlyDataInterface;
 }
 
 export function ComparativeTableOfLastSessionDataAgainstHistoricalAndLatestMonthlyData(
-  props: ComparativeTableOfLastSessionDataAgainstHistoricalAndLatestMonthlyDataProps,
+  props: ComparativeTableOfLastSessionDataAgainstHistoricalAndLatestMonthlyDataProps
 ) {
   const { t } = useTranslation();
   if (!props.data) {
