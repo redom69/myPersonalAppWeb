@@ -139,7 +139,7 @@ const Devices: React.FC = () => {
           <div className="font-medium text-2xl text-900">
             {t('pages.devices.title')}
           </div>
-          {(role === 'marsi' || role === 'maintenance') && (
+          {(role === 'admin' || role === 'maintenance') && (
             <Button
               icon="pi pi-plus"
               label={t('pages.devices.add')}

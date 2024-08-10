@@ -264,7 +264,7 @@ export class PatientService {
 
     let patientIds = [];
 
-    if (userRole !== 'marsi') {
+    if (userRole !== 'admin') {
       const organizationPatients =
         await prisma.organization_has_patient.findMany({
           where: {
@@ -329,7 +329,7 @@ export class PatientService {
   }
 
   async findOne(id: string, user): Promise<PatientView> {
-    if (user.role !== 'marsi') {
+    if (user.role !== 'admin') {
       const orgPatient = await prisma.organization_has_patient.findFirst({
         where: {
           p_id: id,
@@ -396,7 +396,7 @@ export class PatientService {
     let whereCondition = {};
 
     // Si el usuario no es 'marsinet', filtra por su organización
-    if (user.role !== 'marsi') {
+    if (user.role !== 'admin') {
       whereCondition = {
         organization_has_patient: {
           some: {

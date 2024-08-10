@@ -512,7 +512,7 @@ describe('PatientService', () => {
       expect(result[0].surnames).toBe('Desconocido');
     });
     it('should return all patients for marsi user', async () => {
-      const user = { o_id: 'org123', role: 'marsi' };
+      const user = { o_id: 'org123', role: 'admin' };
 
       const patients = [
         {
@@ -567,7 +567,7 @@ describe('PatientService', () => {
 
   describe('findOne', () => {
     it('should return a patient view for marsi user', async () => {
-      const user = { role: 'marsi', o_id: 'org123' };
+      const user = { role: 'admin', o_id: 'org123' };
       const patient = {
         p_id: 'patient123',
         birth_date: new Date(),
@@ -629,7 +629,7 @@ describe('PatientService', () => {
     });
 
     it('should return "kg" and "cm" as default weight and height units when config_patient is null', async () => {
-      const user = { role: 'marsi', o_id: 'org123' };
+      const user = { role: 'admin', o_id: 'org123' };
       const patient = {
         p_id: 'patient123',
         birth_date: new Date(),
@@ -668,7 +668,7 @@ describe('PatientService', () => {
     });
 
     it('should return "Desconocido" for name and surnames when patient_data is null', async () => {
-      const user = { role: 'marsi', o_id: 'org123' };
+      const user = { role: 'admin', o_id: 'org123' };
       const patient = {
         p_id: 'patient123',
         birth_date: new Date(),
@@ -717,7 +717,7 @@ describe('PatientService', () => {
     });
 
     it('should throw an error if patient is not found', async () => {
-      const user = { role: 'marsi', o_id: 'org123' };
+      const user = { role: 'admin', o_id: 'org123' };
 
       (prisma.patients.findUnique as jest.Mock).mockResolvedValue(null);
 
@@ -908,7 +908,7 @@ describe('PatientService', () => {
     });
 
     it('should return all patient configs for marsi user', async () => {
-      const user = { role: 'marsi', o_id: 'org123' };
+      const user = { role: 'admin', o_id: 'org123' };
 
       const patients = [
         {

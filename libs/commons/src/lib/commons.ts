@@ -1247,7 +1247,7 @@ export const PATHOLOGIES = [
 export const ROLES = [
   { value: 'clinic', name: 'Clinic', nombre: 'Clinica' },
   {
-    value: 'marsi',
+    value: 'admin',
     name: 'Marsinet Administrator',
     nombre: 'Administrador Marsinet',
   },
@@ -1323,7 +1323,7 @@ export const TYPE_USER = [
   {
     name: 'Marsinet Administrator',
     nombre: 'Administrador Marsinet',
-    value: 'marsi',
+    value: 'admin',
   },
   {
     name: 'Marsinet Maintenance',

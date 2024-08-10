@@ -211,9 +211,9 @@ const DeviceComponent: React.FC = () => {
                           <div className="col-12 md:col-6 field mb-5 ">
                             <label className="font-bold block mb-2">
                               {t('pages.devices.num_serial')}
-                              {role !== 'marsi' && `: ${device.serial}`}
+                              {role !== 'admin' && `: ${device.serial}`}
                             </label>
-                            {role === 'marsi' && (
+                            {role === 'admin' && (
                               <InputText
                                 id="input-edit-device-serial"
                                 placeholder={t('pages.devices.num_serial')}
@@ -239,9 +239,9 @@ const DeviceComponent: React.FC = () => {
                           <div className="col-12 md:col-6 field mb-5 ">
                             <label className="font-bold block mb-2">
                               {t('pages.devices.type_device')}
-                              {role !== 'marsi' && `: ${device.model}`}
+                              {role !== 'admin' && `: ${device.model}`}
                             </label>
-                            {role === 'marsi' && (
+                            {role === 'admin' && (
                               <InputText
                                 id="input-edit-device-type"
                                 placeholder={t('pages.devices.type_device')}
@@ -268,7 +268,7 @@ const DeviceComponent: React.FC = () => {
                             <label className="font-bold block mb-2">
                               {t('pages.devices.password')}
                             </label>
-                            {role === 'marsi' && (
+                            {role === 'admin' && (
                               <InputText
                                 id="input-edit-device-password"
                                 placeholder={t('pages.devices.password')}
@@ -297,10 +297,10 @@ const DeviceComponent: React.FC = () => {
                           <div className="col-12 md:col-6 field mb-5 ">
                             <label className="font-bold block mb-2">
                               {t('pages.devices.structure_version')}
-                              {role !== 'marsi' &&
+                              {role !== 'admin' &&
                                 `: ${device.structure_version}`}
                             </label>
-                            {role === 'marsi' && (
+                            {role === 'admin' && (
                               <InputText
                                 id="input-edit-device-structure_version"
                                 placeholder={t(
@@ -378,7 +378,7 @@ const DeviceComponent: React.FC = () => {
                           label={t('pages.devices.devicePage.institution')}
                           className="p-button-raised"
                           onClick={() => setVisible(true)}
-                          visible={role === 'marsi'}
+                          visible={role === 'admin'}
                         ></Button>
                       </div>
                       <div className="text-center col-12 pt- md:flex">
@@ -389,7 +389,7 @@ const DeviceComponent: React.FC = () => {
                             onClick={handleDeleteDevice}
                             severity="danger"
                             aria-label="Eliminar"
-                            visible={role === 'marsi'}
+                            visible={role === 'admin'}
                           />
                         </div>
                         <div className="mb-5 col-12 md:col-6" />
@@ -402,7 +402,7 @@ const DeviceComponent: React.FC = () => {
                             onClick={formik.submitForm}
                             className="p-button-raised"
                             type="submit"
-                            visible={role === 'marsi'}
+                            visible={role === 'admin'}
                           />
                         </div>
                       </div>

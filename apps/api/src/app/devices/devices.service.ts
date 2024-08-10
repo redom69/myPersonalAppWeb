@@ -74,14 +74,14 @@ export class DevicesService {
 
   /**
    * Retrieves all devices accessible to the user based on their role.
-   * Users with the 'marsi' role can view all devices, whereas others can only view devices within their organization.
+   * Users with the 'admin' role can view all devices, whereas others can only view devices within their organization.
    * @param user The user token containing user's role and organization information.
    * @returns An array of device records.
    */
   async findAll(user: UserTokenDto): Promise<DeviceTable[]> {
-    // Si el usuario es 'marsi', obtén todos los dispositivos.
+    // Si el usuario es 'admin', obtén todos los dispositivos.
 
-    if (user.role === 'marsi') {
+    if (user.role === 'admin') {
       return prisma.devices.findMany();
     } else {
       // Si el usuario tiene otro rol, obtén los dispositivos asociados con su organización.
@@ -116,7 +116,7 @@ export class DevicesService {
    * @returns The device with the specified ID.
    */
   async findOne(id: string, user): Promise<DeviceTable> {
-    if (user.role === 'marsi') {
+    if (user.role === 'admin') {
       const device = await prisma.devices.findUnique({
         where: { d_id: id },
       });
@@ -191,8 +191,8 @@ export class DevicesService {
     user: UserTokenDto
   ) {
     // Verificar el rol del usuario para determinar el permiso de actualización
-    if (user.role !== 'marsi') {
-      // Si el usuario no es 'marsi', verifica si el dispositivo pertenece a su organización
+    if (user.role !== 'admin') {
+      // Si el usuario no es 'admin', verifica si el dispositivo pertenece a su organización
       const deviceAssociation = await prisma.organization_has_device.findUnique(
         {
           where: {
@@ -235,8 +235,8 @@ export class DevicesService {
    * @throws UnauthorizedException if the user does not have permission to delete the device.
    */
   async removeFromOrg(id: string, user: UserTokenDto) {
-    if (user.role !== 'marsi') {
-      // Si el usuario no es 'marsi', verifica si el dispositivo pertenece a su organización
+    if (user.role !== 'admin') {
+      // Si el usuario no es 'admin', verifica si el dispositivo pertenece a su organización
       const deviceAssociation = await prisma.organization_has_device.findUnique(
         {
           where: {
@@ -284,8 +284,8 @@ export class DevicesService {
    * @throws UnauthorizedException if the user does not have permission to delete the device.
    */
   async remove(id: string, user: UserTokenDto) {
-    if (user.role !== 'marsi') {
-      // Si el usuario no es 'marsi', verifica si el dispositivo pertenece a su organización
+    if (user.role !== 'admin') {
+      // Si el usuario no es 'admin', verifica si el dispositivo pertenece a su organización
       const deviceAssociation = await prisma.organization_has_device.findUnique(
         {
           where: {
@@ -390,8 +390,8 @@ export class DevicesService {
       throw new HttpException('Organization not found', HttpStatus.NOT_FOUND);
     }
 
-    // Verificar si el usuario tiene el rol 'marsi' o pertenece a la organización especificada
-    if (user.role !== 'marsi' && user.o_id !== organization_id) {
+    // Verificar si el usuario tiene el rol 'admin' o pertenece a la organización especificada
+    if (user.role !== 'admin' && user.o_id !== organization_id) {
       throw new HttpException('Access denied', HttpStatus.FORBIDDEN);
     }
 
@@ -456,7 +456,7 @@ export class DevicesService {
       throw new HttpException('Organization not found', HttpStatus.NOT_FOUND);
     }
 
-    if (user.role !== 'marsi' && user.o_id !== organization_id) {
+    if (user.role !== 'admin' && user.o_id !== organization_id) {
       throw new HttpException('Access denied', HttpStatus.FORBIDDEN);
     }
 

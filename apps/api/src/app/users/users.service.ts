@@ -10,7 +10,7 @@ import { Organization } from '../admin/dto/dto';
 export class UsersService {
   /**
    * Finds all users based on the role and organization of the authenticated user.
-   * If the user has the role 'marsi', all users are returned. Otherwise, only users from the same organization are returned.
+   * If the user has the role 'admin', all users are returned. Otherwise, only users from the same organization are returned.
    * @param user - The DTO containing the authenticated user's token information.
    * @returns An array of UserTable, each containing detailed user information.
    */
@@ -24,7 +24,7 @@ export class UsersService {
     }
     let users = [];
 
-    if (user.role === 'marsi') {
+    if (user.role === 'admin') {
       users = await prisma.user.findMany({
         include: {
           user_data: true,

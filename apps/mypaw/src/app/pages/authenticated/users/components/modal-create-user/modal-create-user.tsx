@@ -121,7 +121,7 @@ export function ModalCreateUser(props: Readonly<ModalCreateUserProps>) {
     // Parsear el JSON decodificado
     const payloadObject = JSON.parse(decodedPayload);
     try {
-      if (role === 'marsi') {
+      if (role === 'admin') {
         await apiService.adminControllerAllOrganizations();
       } else {
         await userService.usersControllerGetOrganization(payloadObject.id);

@@ -66,7 +66,7 @@ export class MyAccountService {
    */
 
   async getMenu(user): Promise<GetMenuInfo> {
-    const role: 'clinic' | 'marsi' | 'maintenance' | 'personal' = user.role;
+    const role: 'clinic' | 'admin' | 'maintenance' | 'personal' = user.role;
 
     const menu = [
       // Home
@@ -83,7 +83,7 @@ export class MyAccountService {
 
     if (is_active) {
       // Dispositivos
-      if (role === 'marsi' || role === 'maintenance') {
+      if (role === 'admin' || role === 'maintenance') {
         menu.push({
           i_class_name: 'pi pi-android mr-2',
           to: '/authenticated/devices',
@@ -92,7 +92,7 @@ export class MyAccountService {
       }
 
       // Institutions
-      if (role === 'marsi') {
+      if (role === 'admin') {
         menu.push({
           i_class_name: 'pi pi-building mr-2',
           to: '/authenticated/institutions',
@@ -101,7 +101,7 @@ export class MyAccountService {
       }
 
       // Mantenimiento
-      if (role === 'marsi' || role === 'maintenance') {
+      if (role === 'admin' || role === 'maintenance') {
         menu.push({
           i_class_name: 'pi pi-wrench mr-2',
           to: '/authenticated/maintenance',
@@ -110,7 +110,7 @@ export class MyAccountService {
       }
 
       // Pacientes
-      if (role === 'clinic' || role === 'marsi' || role === 'personal') {
+      if (role === 'clinic' || role === 'admin' || role === 'personal') {
         menu.push({
           i_class_name: 'pi pi-users mr-2',
           to: '/authenticated/patients',
@@ -126,7 +126,7 @@ export class MyAccountService {
       });
 
       // Usuarios
-      if (role === 'marsi' || role === 'clinic') {
+      if (role === 'admin' || role === 'clinic') {
         menu.push({
           i_class_name: 'pi pi-sitemap mr-2',
           to: '/authenticated/users',
@@ -205,12 +205,12 @@ export class MyAccountService {
       );
     }
 
-    if (user.organizations.role === 'marsi') {
-      // Si el rol de la organización es 'marsi', obtener todos los dispositivos
+    if (user.organizations.role === 'admin') {
+      // Si el rol de la organización es 'admin', obtener todos los dispositivos
       const allDevices = await prisma.devices.findMany();
       return { devices: allDevices };
     } else {
-      // Si no es 'marsi', obtener dispositivos de la organización del usuario
+      // Si no es 'admin', obtener dispositivos de la organización del usuario
       const organizationDevices = await prisma.organization_has_device.findMany(
         {
           where: { o_id: user.organizations.o_id },

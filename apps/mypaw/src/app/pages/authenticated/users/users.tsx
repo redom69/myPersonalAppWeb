@@ -182,7 +182,7 @@ export function Users(props: UsersProps) {
           <div className="font-medium text-2xl text-900">
             {t('pages.users.title')}
           </div>
-          {role === 'marsi' && (
+          {role === 'admin' && (
             <Button
               icon="pi pi-plus"
               label={t('pages.users.add')}

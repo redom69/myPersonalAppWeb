@@ -47,7 +47,7 @@ describe('UsersService', () => {
         u_id: '123',
         email: 'test@example.com',
         o_id: '1',
-        role: 'marsi',
+        role: 'admin',
         created_at: '',
         updated_at: '',
         iat: 0,

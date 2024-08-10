@@ -142,7 +142,7 @@ export function Institutions(props: InstitutionsProps) {
           <div className="font-medium text-2xl text-900 p-2">
             {t('pages.institutions.title')}
           </div>
-          {role === 'marsi' && (
+          {role === 'admin' && (
             <Button
               icon="pi pi-plus"
               label={t('pages.institutions.add')}
@@ -196,7 +196,7 @@ export function Institutions(props: InstitutionsProps) {
                 body={(rowData) => <div className="pl-3">{rowData.name}</div>}
               />
               {/* Premium */}
-              {role === 'marsi' && (
+              {role === 'admin' && (
                 <Column
                   header={t('pages.institutions.table.premium')}
                   field="premium"

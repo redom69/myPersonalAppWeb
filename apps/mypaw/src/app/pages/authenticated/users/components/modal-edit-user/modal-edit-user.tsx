@@ -270,7 +270,7 @@ export function ModalEditUser({
             </div>
           </div>
           <div className="text-center whitespace-nowrap overflow-hidden col-12 md:flex">
-            {role === 'marsi' && (
+            {role === 'admin' && (
               <div className="col-12 md:col-3">
                 <Button
                   type="button"

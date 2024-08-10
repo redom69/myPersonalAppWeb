@@ -140,7 +140,7 @@ const TableDevicesComponent: React.FC<TableDevicesComponentProps> = ({
         style={{ width: '20rem' }}
         body={idBodyTemplate}
       />
-      {(role === 'marsi' || role === 'maintenance') && (
+      {(role === 'admin' || role === 'maintenance') && (
         <Column
           header={t('pages.devices.table.active')}
           field="active"

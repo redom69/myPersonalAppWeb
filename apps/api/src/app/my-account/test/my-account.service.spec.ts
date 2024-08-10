@@ -195,7 +195,7 @@ describe('MyAccountService', () => {
 
   describe('getMenu', () => {
     it('should return menu for active marsi user', async () => {
-      const user = { u_id: 'user123', role: 'marsi' };
+      const user = { u_id: 'user123', role: 'admin' };
       (user_is_active as jest.Mock).mockResolvedValue(true);
       (get_if_organization_has_premium as jest.Mock).mockResolvedValue(true);
 
@@ -310,7 +310,7 @@ describe('MyAccountService', () => {
     });
 
     it('should return menu for inactive user', async () => {
-      const user = { u_id: 'user123', role: 'marsi' };
+      const user = { u_id: 'user123', role: 'admin' };
       (user_is_active as jest.Mock).mockResolvedValue(false);
       (get_if_organization_has_premium as jest.Mock).mockResolvedValue(false);
 
@@ -371,7 +371,7 @@ describe('MyAccountService', () => {
     it('should return all devices for user with marsi role', async () => {
       const user = {
         u_id: 'user123',
-        organizations: { role: 'marsi', o_id: 'org123' },
+        organizations: { role: 'admin', o_id: 'org123' },
       };
 
       (prisma.user.findUnique as jest.Mock).mockResolvedValue(user);

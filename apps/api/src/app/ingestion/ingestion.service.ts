@@ -642,9 +642,9 @@ export class IngestionService {
       deviceIds = devices.map((device) => device.d_id);
     }
 
-    // Obtener los d_id asociados a la organización del usuario si el rol no es 'marsi'
+    // Obtener los d_id asociados a la organización del usuario si el rol no es 'admin'
     let organizationDeviceIds: string[] = [];
-    if (user.role !== 'marsi') {
+    if (user.role !== 'admin') {
       organizationDeviceIds = await prisma.organization_has_device
         .findMany({
           where: {
@@ -659,7 +659,7 @@ export class IngestionService {
 
     // Construir la cláusula where para d_id basada en los dispositivos de la organización
     const dIdClause =
-      user.role !== 'marsi'
+      user.role !== 'admin'
         ? {
             d_id: {
               in: organizationDeviceIds.map((d_id) => d_id.toLowerCase()),

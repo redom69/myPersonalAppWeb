@@ -190,7 +190,7 @@ export function Patients(props: PatientsProps) {
               body={(rowData) => <div className="pl-3">{rowData.surnames}</div>}
             />
             {/* Institución */}
-            {role === 'marsi' && (
+            {role === 'admin' && (
               <Column
                 header={t('pages.patients.table.institutions')}
                 field="institutions"
