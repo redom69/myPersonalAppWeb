@@ -165,9 +165,7 @@ export function LegalNotice(props: LegalNoticeProps) {
               {t(
                 'pages.register.legalNoticeTexts.exclusionWarrantiesText5'
               )}{' '}
-              <a href="mailto:soporte.marsinet@marsibionics.com">
-                soporte.marsinet@marsibionics.com
-              </a>{' '}
+              <a href="mailto:email@test.com">email@test.com</a>{' '}
               {t('pages.register.legalNoticeTexts.exclusionWarrantiesText6')}
             </p>
             {/* MODIFICACIONES */}

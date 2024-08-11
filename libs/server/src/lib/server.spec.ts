@@ -13,12 +13,12 @@ import {
 } from './server';
 import { prisma } from './utils';
 
-const email = 'user-without-data.test@marsinet.com';
+const email = 'user-without-data.test@test.com';
 const password = 'testing-password';
 const password_invalid = 'password_invalid';
 
 const userToCreate = {
-  // username: 'new-user.test@marsinet.com',
+  // username: 'new-user.test@test.com',
   username: 'd.romero@alicunde.com',
   password: 'Mola2020',
   name: 'Damian',
@@ -71,7 +71,7 @@ describe('Testing user worflow login and create', () => {
 
   it(`Login with user no correct password: ${email} and password ${password_invalid}`, async () => {
     expect(login(email, password_invalid)).rejects.toThrow(
-      ERROR_PASSWORD_NOT_VALID,
+      ERROR_PASSWORD_NOT_VALID
     );
   });
 
@@ -117,13 +117,13 @@ describe('Testing user worflow login and create', () => {
     };
     expect(await createUser(username, password, userData)).toHaveProperty(
       'email',
-      userToCreate.username,
+      userToCreate.username
     );
   });
 
   it('Should generate reset password token', async () => {
     const response = await generate_reset_token_password_and_send_email(
-      userToCreate.username,
+      userToCreate.username
     );
     expect(response.success).toBeTruthy();
 

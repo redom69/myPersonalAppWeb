@@ -1,7 +1,7 @@
 describe('App Tests for Register', () => {
   beforeEach(() => {
     cy.intercept('POST', '/register', (req) => {
-      if (req.body.email === 'email-ayuda.test@marsinet.com') {
+      if (req.body.email === 'email-ayuda.test@email.com') {
         req.reply({
           statusCode: 201,
           body: {
@@ -62,7 +62,7 @@ describe('App Tests for Register', () => {
     cy.fixture('auth/registerData').then((register) => {
       cy.get('#input-register-name').type(register.name);
       cy.get('#input-register-surnames').type(register.surnames);
-      cy.get('#input-register-email').type('administracion@marsinet.com');
+      cy.get('#input-register-email').type('admin@email.com');
       cy.get('#input-register-password').type(register.password);
       cy.get('#input-register-phone').type(register.phone);
       cy.get('#input-register-birth_date input.p-inputtext').type(

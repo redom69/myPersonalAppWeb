@@ -398,7 +398,7 @@ export function Home(props: HomeProps) {
                     <div className="h-full flex flex-column justify-content-center">
                       <div className="text-center">
                         <img
-                          alt="clock-marsinet"
+                          alt="clock"
                           className="w-5rem"
                           src="assets/icons8-clock-100.png"
                         />

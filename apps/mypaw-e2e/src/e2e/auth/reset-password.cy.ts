@@ -6,7 +6,7 @@ describe('App Tests for Reset Password', () => {
   it('Should reset the password with a valid email', () => {
     cy.contains('div', '¿Olvidaste tu contraseña?').click();
     cy.url().should('include', '/request-reset-password');
-    cy.get('img[alt="logo marsinet"]').should('be.visible');
+    cy.get('img[alt="logo"]').should('be.visible');
 
     cy.fixture('auth/loginData').then((login) => {
       cy.get('input[name="email"]').should('be.visible').type(login.username);
@@ -23,7 +23,7 @@ describe('App Tests for Reset Password', () => {
   it('Should display an error message for empty email field', () => {
     cy.contains('div', '¿Olvidaste tu contraseña?').click();
     cy.url().should('include', '/request-reset-password');
-    cy.get('img[alt="logo marsinet"]').should('be.visible');
+    cy.get('img[alt="logo"]').should('be.visible');
 
     cy.get('input[name="email"]').should('be.visible').clear();
     cy.get('button.p-button.p-component').click();
@@ -38,11 +38,11 @@ describe('App Tests for Reset Password', () => {
   it('Should display an error message for invalid email', () => {
     cy.contains('div', '¿Olvidaste tu contraseña?').click();
     cy.url().should('include', '/request-reset-password');
-    cy.get('img[alt="logo marsinet"]').should('be.visible');
+    cy.get('img[alt="logo "]').should('be.visible');
 
     cy.get('input[name="email"]')
       .should('be.visible')
-      .type('invalid@marsinet.com');
+      .type('invalid@email.com');
     cy.get('button.p-button.p-component').click();
 
     cy.popMessage('Usuario no encontrado');

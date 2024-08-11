@@ -55,7 +55,7 @@ describe('PatientModule (e2e)', () => {
     // Middleware para simular request.user
     app.use((req, _, next) => {
       req.user = {
-        role: 'admin_marsinet',
+        role: 'admin',
         id: 'some-user-id', // Simula el usuario como parte de la solicitud
         // Agrega cualquier otra propiedad necesaria
       };
@@ -77,7 +77,7 @@ describe('PatientModule (e2e)', () => {
   it('/patient/:id (GET) - obtener datos de un paciente específico', async () => {
     const patientId = 'e4edf1ee-d924-4a4d-b788-9a457afad90c';
 
-    // Simula un usuario con rol de admin_marsinet si es necesario para esta prueba
+    // Simula un usuario con rol de admin si es necesario para esta prueba
     // Esto se haría en el middleware que has configurado en tu aplicación de prueba
 
     await request(app.getHttpServer())

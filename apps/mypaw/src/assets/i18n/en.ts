@@ -737,7 +737,7 @@ const en = {
         textIdentificationData:
           'In compliance with the information duty established in Article 10 of Law 34/2002, of July 11, on Information Society Services and Electronic Commerce, the following data is provided below:',
         textLegalNotice:
-          'The purpose of this document is to establish and regulate the rules for the use of this website, understanding by this all the pages and their content owned by MARSI BIONICS S.L. that can be accessed through the domain www.marsinet.com. The use of the website implies the condition of user of it and implies the acceptance of all the conditions included in this Legal Notice. The user agrees to carefully read this Legal Notice on each occasion they intend to use our website, as it and its conditions of use, as set forth in this Legal Notice, may undergo modifications.',
+          'The purpose of this document is to establish and regulate the rules for the use of this website, understanding by this all the pages and their content owned by MARSI BIONICS S.L. that can be accessed through the domain www.mypaw.com. The use of the website implies the condition of user of it and implies the acceptance of all the conditions included in this Legal Notice. The user agrees to carefully read this Legal Notice on each occasion they intend to use our website, as it and its conditions of use, as set forth in this Legal Notice, may undergo modifications.',
         tome: 'Volume:',
         usePortalText:
           'This portal provides access to an analysis of the data collected from the use of any of the collected following the use of any of the devices marketed by Marsi Bionics. The user assumes the responsibility for the use of the portal. This responsibility extends to the extends to the registration or collection of data that may be necessary to access certain access to certain services. When registering, the user will be responsible for providing truthful and lawful information.',
@@ -821,8 +821,7 @@ const en = {
           'Likewise, you guarantee that the data provided are accurate and up to date, being responsible for any damage or loss, direct or indirect, that may be caused as a result of non-compliance with this obligation.',
         personalDataThirdPartiesTitle: 'PERSONAL DATA OF THIRD PARTIES',
         phone: 'Phone:',
-        pivacyPoliceText:
-          'In accordance with the provisions of EU Regulation 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR) and Organic Law 3/2018 of 5 December on the Protection of Personal Data and guarantee of digital rights, MARSI BIONICS S. L, informs you that, by accepting this Privacy Policy, you give your express, informed, free and unequivocal consent for the data you provide, and on which the security, technical and organisational measures provided for in the current regulations are applied, to be processed by MARSI BIONICS S.L, as the data controller. The personal data that we may collect directly from the person concerned through www.marsinet.com will be treated confidentially and will be incorporated into the corresponding processing activity owned by MARSI BIONICS S.L.',
+        pivacyPoliceText: '',
         pivacyPoliceTitle: 'PRIVACY POLICY',
         responsability:
           'Security Officer or Data Protection Officer, if applicable:',
@@ -883,7 +882,7 @@ const en = {
         whatYoursRightsText7:
           'Right to data portability - This means that you have the right to receive personal data relating to you, which you have provided to a controller, in a structured, commonly used and machine-readable format and to transfer it to another controller.',
         whatYoursRightsText8:
-          'You may exercise the aforementioned rights by contacting the person responsible by e-mail at soporte.marsinet@marsibionics.com or by telephone on 914 90 00 90. Forms for the exercise of rights may also be submitted in person or sent by letter to the postal address Marie Curie 13, Planta 6, Edif. Bioma, Oficinas 1-2, 28521 Rivas-Vaciamadrid, Madrid.',
+          'You may exercise the aforementioned rights by contacting the person responsible by e-mail at email@test.com or by telephone on 914 90 00 90. Forms for the exercise of rights may also be submitted in person or sent by letter to the postal address Marie Curie 13, Planta 6, Edif. Bioma, Oficinas 1-2, 28521 Rivas-Vaciamadrid, Madrid.',
         whatYoursRightsText9:
           'In the case of acting through a legal representative, you must also provide your ID card and a document accrediting the representative´s representation.',
         whatYoursRightsTitle:

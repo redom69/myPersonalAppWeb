@@ -1,7 +1,7 @@
 describe('App Tests for Login', () => {
   beforeEach(() => {
     cy.intercept('POST', '/login', (req) => {
-      if (req.body.username === 'administracion@marsinet.com') {
+      if (req.body.username === 'admin@admin.com') {
         req.reply({
           statusCode: 200,
           body: {
@@ -33,7 +33,7 @@ describe('App Tests for Login', () => {
   });
 
   it('Should display an error message for invalid login', () => {
-    cy.get('input[name="username"]').type('invalid@marsinet.com');
+    cy.get('input[name="username"]').type('invalid@email.com');
     cy.get('#password-login input[name="password"]').type('wrongpassword');
     cy.get('button#button-login-submit').click();
 

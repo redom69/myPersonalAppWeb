@@ -247,9 +247,7 @@ export function CookiePolicy(props: CookiePolicyProps) {
               <br />
               MARSI BIONICS S.L Calle Marie Curie, 13, Planta 6, Edif. Bioma,
               Oficinas 1-2, 28521 Rivas-Vaciamadrid, Madrid.{' '}
-              <a href="mailto:soporte.marsinet@marsibionics.com">
-                soporte.marsinet@marsibionics.com
-              </a>{' '}
+              <a href="mailto:email@test.com">email@test.com</a>{' '}
             </p>
             {/* COOKIES */}
             <h2 className="text-xl font-bold text-900 text-left">

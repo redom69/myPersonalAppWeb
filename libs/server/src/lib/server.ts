@@ -25,7 +25,7 @@ const jwtService = new JwtService({
   secret: process.env.jwtSecretKey,
 });
 const URL_FRONTED = process.env.URL_FRONTED || 'http://localhost:4200';
-const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'marsinet@marsinet.com';
+const CONTACT_EMAIL = process.env.CONTACT_EMAIL || 'email@test.com';
 const CONTACT_PHONE = process.env.CONTACT_PHONE || '955 99 99 99';
 
 export const ERROR_USER_NOT_FOUND = 'User not found';

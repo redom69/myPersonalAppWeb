@@ -163,9 +163,7 @@ export function Confidentiality(props: ConfidentialityProps) {
               {t(
                 'pages.register.privacyPoliceTexts.howLongWillWeProcessText3'
               )}{' '}
-              <a href="mailto:soporte.marsinet@marsibionics.com">
-                soporte.marsinet@marsibionics.com
-              </a>{' '}
+              <a href="mailto:email@test.com">email@test.com</a>{' '}
               {t('pages.register.privacyPoliceTexts.howLongWillWeProcessText4')}
             </p>
             {/* DESTINATARIOS */}
@@ -301,9 +299,7 @@ export function Confidentiality(props: ConfidentialityProps) {
               {t(
                 'pages.register.privacyPoliceTexts.additionalInformationText1'
               )}
-              <a href="mailto:soporte.marsinet@marsibionics.com">
-                soporte.marsinet@marsibionics.com
-              </a>
+              <a href="mailto:email@test.com">email@test.com</a>
               {t(
                 'pages.register.privacyPoliceTexts.additionalInformationText2'
               )}

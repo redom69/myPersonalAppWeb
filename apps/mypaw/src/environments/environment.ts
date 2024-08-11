@@ -1,18 +1,18 @@
 export const LOCAL_STORAGE_TOKEN = 'at';
 export const LOCAL_STORAGE_REFRESH_TOKEN = 'rt';
 
-export const VERSION = '2.1.1';
+export const VERSION = '0.0.1';
 
 export const environment = {
   production: false,
   apiBaseUrl: 'http://localhost:3334',
   // apiBaseUrl: 'https://api.develop.marsinet.com',
   loginForm: {
-    username: 'administracion@marsinet.com',
-    password: 'MarsiMola2023',
+    username: 'email-ayuda.test@test.com',
+    password: 'admin',
   },
   registerForm: {
-    email: 'email-ayuda.test@marsinet.com',
+    email: 'email-ayuda.test@test.com',
     password: 'Mola2020',
     name: 'Damian',
     surnames: 'Romero',
@@ -22,8 +22,8 @@ export const environment = {
     organization_id: '62f18ac7-2fef-4ae2-99fc-337bd321a30c',
   },
   resetPasswordForm: {
-    password: 'MarsiMola2023',
-    confirmPassword: 'MarsiMola2023',
+    password: 'admin',
+    confirmPassword: 'admin',
   },
   newPatientForm: {
     name: 'Damian',

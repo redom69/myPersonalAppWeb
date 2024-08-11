@@ -23,7 +23,7 @@ declare namespace Cypress {
 // Define the custom command to verify the Login page
 Cypress.Commands.add('verifyLoginPage', () => {
   cy.visit('/login');
-  cy.get('img[alt="logo marsinet"]').should('be.visible');
+  cy.get('img[alt="logo "]').should('be.visible');
   cy.contains('strong', 'Conectando datos,').should('be.visible');
   cy.contains('transformando vidas').should('be.visible');
   cy.get('input[name="username"]').should('be.visible');
@@ -61,7 +61,7 @@ Cypress.Commands.add('checkDashboard', () => {
     'contain.text',
     'Exo prueba'
   );
-  cy.get('.surface-card img[alt="clock-marsinet"]').should('be.visible');
+  cy.get('.surface-card img[alt="clock"]').should('be.visible');
   cy.get('.surface-card .text-700.text-2xl.font-bold').should(
     'contain.text',
     'Total Pasos'

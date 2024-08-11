@@ -746,8 +746,7 @@ const es = {
         text2IdentificationData: 'El titular del presente sitio es:',
         textIdentificationData:
           'En cumplimiento con el deber de información recogido en artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y del Comercio Electrónico, a continuación, se reflejan los siguientes datos:',
-        textLegalNotice:
-          ' El presente documento tiene como finalidad el establecer y regular las normas de uso de este portal web, entendiendo por éste todas las páginas y sus contenidos propiedad de MARSI BIONICS S.L. a las cuales se accede a través del dominio www.marsinet.com. La utilización del portal web atribuye la condición de usuario de este e implica la aceptación de todas las condiciones incluidas en el presente Aviso Legal. El usuario se compromete a leer atentamente el presente Aviso Legal en cada una de las ocasiones en que se proponga utilizar nuestro portal web ya que éste y sus condiciones de uso recogidas en el presente Aviso Legal pueden sufrir modificaciones.',
+        textLegalNotice: '',
         tome: 'Tomo:',
         usePortalText:
           'Este portal proporciona el acceso a un análisis de los datos recopilados tras el uso de alguno de los dispositivos comercializados por Marsi Bionics. El usuario asume la responsabilidad del uso del portal. Dicha responsabilidad se extiende al registro o recogida de datos que fuese necesaria para acceder a determinados servicios. En dicho registro el usuario será responsable de aportar información veraz y lícita.',
@@ -834,8 +833,7 @@ const es = {
           'Igualmente, usted garantiza que los datos aportados son exactos y actualizados, siendo responsable de cualquier daño o perjuicio, directo o indirecto, que pudiera ocasionarse como consecuencia del incumplimiento de tal obligación.',
         personalDataThirdPartiesTitle: 'DATOS PERSONALES DE TERCEROS',
         phone: 'Teléfono:',
-        pivacyPoliceText:
-          'De conformidad con lo dispuesto en el Reglamento UE 2016/679, del Parlamento Europeo y del Consejo del 27 de abril de 2016 (RGPD) y la Ley Orgánica 3/2018, del 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, MARSI BIONICS S.L, te informa de que, mediante la aceptación de esta Política de Privacidad, prestas tu consentimiento expreso, informado, libre e inequívoco para que los datos que proporcionas, y sobre los que se aplican las medidas de seguridad, técnicas y organizativas previstas en la normativa vigente, sean tratados por MARSI BIONICS S.L, como responsable del tratamiento. Los datos de carácter personal que pudiésemos recabar directamente del interesado a través de www.marsinet.com serán tratados de forma confidencial y quedarán incorporados a la correspondiente actividad de tratamiento titularidad de MARSI BIONICS S.L.',
+        pivacyPoliceText: '',
         pivacyPoliceTitle: 'POLÍTICA DE PRIVACIDAD',
         responsability:
           'Responsable de Seguridad o Delegado de Protección de Datos en su caso:',
@@ -896,7 +894,7 @@ const es = {
         whatYoursRightsText7:
           'Derecho a la portabilidad de sus datos.- Es decir, tendrá derecho a recibir los datos personales que le incumban, que haya facilitado a un responsable del tratamiento, en un formato estructurado, de uso común y lectura mecánica y a transmitirlos a otro responsable del tratamiento.',
         whatYoursRightsText8:
-          'Podrá ejercer los referidos derechos, dirigiéndose al responsable a través del correo electrónico soporte.marsinet@marsibionics.com o del teléfono 914 90 00 90. Los formularios para el ejercicio de derechos también pueden ser presentados presencialmente o enviados por carta a la dirección postal Marie Curie 13, Planta 6, Edif. Bioma, Oficinas 1-2, 28521 Rivas-Vaciamadrid, Madrid.',
+          'Podrá ejercer los referidos derechos, dirigiéndose al responsable a través del correo electrónico email@test.com o del teléfono 914 90 00 90. Los formularios para el ejercicio de derechos también pueden ser presentados presencialmente o enviados por carta a la dirección postal Marie Curie 13, Planta 6, Edif. Bioma, Oficinas 1-2, 28521 Rivas-Vaciamadrid, Madrid.',
         whatYoursRightsText9:
           'En caso de que se actúe a través de representación legal, deberá aportar, además, DNI y documento acreditativo de la representación del representante.',
         whatYoursRightsTitle:

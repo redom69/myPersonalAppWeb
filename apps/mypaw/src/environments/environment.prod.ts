@@ -1,6 +1,6 @@
 export const LOCAL_STORAGE_TOKEN = 'at';
 export const LOCAL_STORAGE_REFRESH_TOKEN = 'rt';
-export const VERSION = '2.1.1';
+export const VERSION = '0.0.1';
 
 export const environment = {
   production: true,

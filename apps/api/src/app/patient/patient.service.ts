@@ -395,7 +395,7 @@ export class PatientService {
     // Inicializa una variable para el where condicional basado en el rol
     let whereCondition = {};
 
-    // Si el usuario no es 'marsinet', filtra por su organización
+    // Si el usuario no es 'admin', filtra por su organización
     if (user.role !== 'admin') {
       whereCondition = {
         organization_has_patient: {

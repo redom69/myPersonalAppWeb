@@ -54,7 +54,7 @@ export function SessionSummaryBar(props: SessionSummaryBarProps) {
           <img
             className="w-3rem text-center md:mr-2"
             src="assets/icons8-footprint-80.png"
-            alt="steps marsinet"
+            alt="steps"
           />
           <div className=" text-center">
             <div className="text-center ">
@@ -81,7 +81,7 @@ export function SessionSummaryBar(props: SessionSummaryBarProps) {
           <img
             className="w-3rem mr-2"
             src="assets/icons8-clock-100.png"
-            alt="clock marsinet"
+            alt="clock"
           />
           <div className="t ">
             <div className="text-center ">

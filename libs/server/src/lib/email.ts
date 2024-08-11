@@ -1,7 +1,7 @@
 import sgMail from '@sendgrid/mail';
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-const from = 'marsinet@marsibionics.com';
+const from = 'email@test.com';
 
 // Send welcome email when user is activated in the web using the toggle
 // ** In use
@@ -10,7 +10,7 @@ export interface WelcomeEmailData {
 }
 export async function welcomeEmail(
   to: string,
-  dynamicTemplateData: WelcomeEmailData,
+  dynamicTemplateData: WelcomeEmailData
 ) {
   const templateId = 'd-59336437d80e4ba985afef5ddcc03e80';
 
@@ -33,7 +33,7 @@ export interface ResetPasswordEmailData {
 }
 export async function resetPasswordEmail(
   to: string,
-  dynamicTemplateData: ResetPasswordEmailData,
+  dynamicTemplateData: ResetPasswordEmailData
 ) {
   const templateId = 'd-f7afc57838e2421f98e69ba8506071d1';
   return sgMail.send({
@@ -53,7 +53,7 @@ export interface byeByeEmailData {
 }
 export async function byeByeEmail(
   to: string,
-  dynamicTemplateData: byeByeEmailData,
+  dynamicTemplateData: byeByeEmailData
 ) {
   const templateId = 'd-68fa89fa48f94655a684f746d4344581';
   return sgMail.send({
@@ -73,7 +73,7 @@ export interface NewAdminEmailData {
 
 export function sendWelcomeEmailAdmin(
   to: string,
-  dynamicTemplateData: NewAdminEmailData,
+  dynamicTemplateData: NewAdminEmailData
 ) {
   const templateId = 'd-ad0a62eb5c534dbf9e11c26a435b7108';
   return sgMail.send({

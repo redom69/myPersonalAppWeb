@@ -1248,13 +1248,13 @@ export const ROLES = [
   { value: 'clinic', name: 'Clinic', nombre: 'Clinica' },
   {
     value: 'admin',
-    name: 'Marsinet Administrator',
-    nombre: 'Administrador Marsinet',
+    name: ' Administrator',
+    nombre: 'Administrador ',
   },
   {
     value: 'maintenance',
-    name: 'Marsinet Maintenance',
-    nombre: 'Mantenimiento Marsinet',
+    name: ' Maintenance',
+    nombre: 'Mantenimiento ',
   },
   { value: 'personal', name: 'Personal', nombre: 'Personal' },
 ];
@@ -1321,13 +1321,13 @@ export const TREATMENTS = [
 
 export const TYPE_USER = [
   {
-    name: 'Marsinet Administrator',
-    nombre: 'Administrador Marsinet',
+    name: ' Administrator',
+    nombre: 'Administrador ',
     value: 'admin',
   },
   {
-    name: 'Marsinet Maintenance',
-    nombre: 'Mantenimiento Marsinet',
+    name: ' Maintenance',
+    nombre: 'Mantenimiento ',
     value: 'maintenance',
   },
   {
