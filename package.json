@@ -11,7 +11,9 @@
     "test": "npx jest",
     "test:e2e": "cd apps/mypaw-e2e && npx cypress run --record --key 295c37ea-5d66-47ca-a074-1e63e1fd5403",
     "test:e2e:open": "cd apps/mypaw-e2e && npx cypress open",
-    "ci-cd": "npm ci && npx prettier --check 'apps/api/**/*.{ts,tsx,js,jsx,json,css,md}' && npx prettier --check 'apps/mypaw/**/*.{ts,tsx,js,jsx,json,css,md}' && npx nx lint api && npx nx lint mypaw && [ -d 'apps/api' ] && (cd apps/api && npx jest) && [ -d 'apps/mypaw' ] && (cd apps/mypaw && npx jest)"
+    "ci-cd": "npm ci && npx prettier --check 'apps/api/**/*.{ts,tsx,js,jsx,json,css,md}' && npx prettier --check 'apps/mypaw/**/*.{ts,tsx,js,jsx,json,css,md}' && npx nx lint api && npx nx lint mypaw && [ -d 'apps/api' ] && (cd apps/api && npx jest) && [ -d 'apps/mypaw' ] && (cd apps/mypaw && npx jest)",
+    "build": "NODE_OPTIONS='--max-old-space-size=512' npm ci --prefer-offline && npx prisma generate && NODE_OPTIONS='--max-old-space-size=512' nx build mypaw --skip-nx-cache --max-workers=1 --prod && NODE_OPTIONS='--max-old-space-size=512' nx build api --skip-nx-cache --max-workers=1 --prod",
+    "deploy": "vercel --prod"
   },
   "private": true,
   "devDependencies": {
