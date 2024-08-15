@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import GraphSteps from './graph-steps';
+import GraphSteps from './s';
 
 describe('GraphSteps', () => {
   it('should render successfully', () => {

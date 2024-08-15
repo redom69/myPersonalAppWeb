@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import GraphStepsDistribution from './graph-steps-distribution';
+import GraphStepsDistribution from './sd';
 
 describe('GraphStepsDistribution', () => {
   it('should render successfully', () => {

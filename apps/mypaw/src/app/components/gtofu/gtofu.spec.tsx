@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import GraphTimeOfUse from './graph-time-of-use';
+import GraphTimeOfUse from './gtofu';
 
 describe('GraphTimeOfUse', () => {
   it('should render successfully', () => {

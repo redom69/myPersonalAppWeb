@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import ModalAddClinic from './modal-add-clinic';
+import ModalAddClinic from './mac';
 
 describe('ModalAddClinic', () => {
   it('should render successfully', () => {

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 
-import AccountNotYetActivated from './account-not-yet-activated';
+import AccountNotYetActivated from './anya';
 
 describe('AccountNotYetActivated', () => {
   it('should render successfully', () => {

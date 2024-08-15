@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { SelectorLanguageComponent } from './selector-language-component';
 import { Context } from '../../context/provider';
+import { SelectorLanguageComponent } from './slc';
 
 describe('SelectorLanguageComponent', () => {
   const mockSetLanguageContext = jest.fn();
