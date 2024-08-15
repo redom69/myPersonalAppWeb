@@ -13,8 +13,8 @@ import {
   MyAccountApiFactory,
 } from '../../../typescript-axios';
 import { Context } from '../../../context/provider';
-import ModalAddDevice from './components/modal-add-device/modal-add-device';
-import TableDevicesComponent from './components/table-devices-component/table-devices-component';
+import ModalAddDevice from '../../../components/mad/mad';
+import TableDevicesComponent from '../../../components/tdc/tdc';
 
 const apiService = DevicesApiFactory();
 const apiServiceAdmin = MyAccountApiFactory();

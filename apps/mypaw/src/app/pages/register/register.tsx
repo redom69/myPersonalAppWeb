@@ -19,7 +19,7 @@ import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import { Toast } from 'primereact/toast';
 import { Checkbox } from 'primereact/checkbox';
-import SelectorLanguageComponent from '../../components/selector-language-component/selector-language-component';
+import SelectorLanguageComponent from '../../components/slc/slc';
 import { ProgressBar } from 'primereact/progressbar';
 import { Dropdown } from 'primereact/dropdown';
 import { useUserValidationSchema } from '../../validations';

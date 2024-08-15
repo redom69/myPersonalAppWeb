@@ -3,11 +3,11 @@ import { useTranslation } from 'react-i18next';
 import { useContext, useEffect, useState } from 'react';
 import { Checkbox } from 'primereact/checkbox';
 import { ChartData, ChartOptions } from 'chart.js';
-import GraphNumberOfSteps from './components/graph-number-of-steps/graph-number-of-steps';
-import GraphTimeOfUse from './components/graph-time-of-use/graph-time-of-use';
+import GraphNumberOfSteps from '../../../components/gnos1/gnos';
+import GraphTimeOfUse from '../../../components/gtofu/gtofu';
 import { Dropdown } from 'primereact/dropdown';
-import GraphDistributionSteps from './components/graph-distribution-steps/graph-distribution-steps';
-import GraphDistributionTime from './components/graph-distribution-time/graph-distribution-time';
+import GraphDistributionSteps from '../../../components/gds/gds';
+import GraphDistributionTime from '../../../components/gdt/gdt';
 
 import { Context } from '../../../context/provider';
 import axios from 'axios';

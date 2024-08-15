@@ -10,13 +10,13 @@ import {
   MyAccountApiFactory,
   SessionsApiFactory,
 } from '../../../typescript-axios';
-import SessionSummaryBar from '../patients/patient/components/session-summary-bar/session-summary-bar';
+import SessionSummaryBar from '../../../components/ssb/session-summary-bar';
 import { Context } from '../../../context/provider';
 import { ChartData, ChartOptions } from 'chart.js';
-import GraphNumbersOfSteps from './components/graph-numbers-of-steps/graph-numbers-of-steps';
-import IncidentReport from './components/incident-report/incident-report';
-import GraphTimeOfUse from './components/graph-time-of-use/graph-time-of-use';
-import GraphDistribution from './components/graph-distribution/graph-distribution';
+import GraphNumbersOfSteps from '../../../components/gnos/gnos';
+import IncidentReport from '../../../components/ir/ir';
+import GraphTimeOfUse from '../../../components/gtou/gtou';
+import GraphDistribution from '../../../components/gd/gd';
 import DateRangePicker from '../../../components/date-range-picker/date-range-picker';
 
 import {

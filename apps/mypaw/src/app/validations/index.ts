@@ -3,7 +3,7 @@ export { useUserValidationSchema } from './userValidationSchema';
 export { useEmailValidationSchema } from './emailValidationSchema';
 export { useResetPasswordValidationSchema } from './resetPasswordValidationSchema';
 export { useEditUserValidationSchema } from './editUserValidationSchema';
-export { useAddDeviceToInstitutionValidationSchema } from './addDeviceToInstitutionValidationSchema';
+export { useAddDeviceToInstitutionValidationSchema } from './adtiValidationSchema';
 export { useInstitutionValidationSchema } from './institutionValidationSchema';
 export { useCreateInstitutionValidationSchema } from './createInstitutionValidationSchema';
 export { useDeviceValidationSchema } from './deviceValidationSchema';

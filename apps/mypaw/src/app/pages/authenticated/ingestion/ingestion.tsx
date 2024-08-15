@@ -11,7 +11,7 @@ import {
 } from '../../../typescript-axios';
 import { Button } from 'primereact/button';
 import { Toast } from 'primereact/toast';
-import Graphs from '../maintenance/components/graphs/graphs';
+import Graphs from '../m/components/g/g';
 import { InputText } from 'primereact/inputtext';
 
 /* eslint-disable-next-line */

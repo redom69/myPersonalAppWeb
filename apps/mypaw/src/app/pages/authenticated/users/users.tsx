@@ -10,11 +10,11 @@ import { Context } from '../../../context/provider';
 import axios from 'axios';
 import { TabView, TabPanel } from 'primereact/tabview';
 import { ConfirmDialog } from 'primereact/confirmdialog';
-import TableUsersComponent from './components/table-users-component/table-users-component';
+import TableUsersComponent from '../../../components/tuc/tuc';
 
 import { Button } from 'primereact/button';
-import ModalCreateUser from './components/modal-create-user/modal-create-user';
-import ModalEditUser from './components/modal-edit-user/modal-edit-user';
+import ModalCreateUser from '../../../components/mcu/mcu';
+import ModalEditUser from '../../../components/meu/meu';
 
 /* eslint-disable-next-line */
 export interface UsersProps {}

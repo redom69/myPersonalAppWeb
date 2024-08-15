@@ -23,7 +23,8 @@
       "@mypaw/commons": ["libs/commons/src/index.ts"],
       "@mypaw/server": ["libs/server/src/index.ts"],
       "@mypaw/web-commons": ["libs/web-commons/src/index.ts"]
-    }
+    },
+    "types": ["jest", "node"] // Añadir jest aquí
   },
   "exclude": ["node_modules", "tmp", "**/*.test.ts", "**/*.spec.ts"],
   "include": [

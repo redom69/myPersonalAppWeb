@@ -12,7 +12,7 @@ import { classNames } from 'primereact/utils';
 
 import { UserNotAuthenticatedApiFactory } from '../../typescript-axios';
 import { Context } from '../../context/provider';
-import SelectorLanguageComponent from '../../components/selector-language-component/selector-language-component';
+import SelectorLanguageComponent from '../../components/slc/slc';
 import { useLoginValidationSchema } from '../../validations';
 import {
   environment,
@@ -52,6 +52,7 @@ const Login: React.FC = () => {
       const {
         data: { access_token, refresh_token },
       } = await apiService.appControllerLogin(formik.values);
+
       loginSuccess(access_token, refresh_token);
     } catch (error) {
       console.error(error);

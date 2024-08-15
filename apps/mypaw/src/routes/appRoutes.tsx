@@ -7,11 +7,11 @@ import {
 } from 'react-router-dom';
 import Login from '../app/pages/login/login';
 import Register from '../app/pages/register/register';
-import RequestResetPassword from '../app/pages/request-reset-password/request-reset-password';
+import RequestResetPassword from '../app/pages/rrp/rrp';
 import ResetPassword from '../app/pages/reset-password/reset-password';
 import Ingestion from '../app/pages/authenticated/ingestion/ingestion';
 import Patients from '../app/pages/authenticated/patients/patients';
-import Patient from '../app/pages/authenticated/patients/patient/patient';
+import Patient from '../app/pages/authenticated/patients/p/p';
 import Sessions from '../app/pages/authenticated/sessions/sessions';
 import { Ripple } from 'primereact/ripple';
 import { StyleClass } from 'primereact/styleclass';
@@ -25,8 +25,8 @@ import {
 } from '../environments/environment';
 import { useTranslation } from 'react-i18next';
 import Informe from '../app/pages/authenticated/informe/informe';
-import MyProfile from '../app/pages/authenticated/my-profile/my-profile';
-import SelectorLanguageComponent from '../app/components/selector-language-component/selector-language-component';
+import MyProfile from '../app/pages/authenticated/my-profile/mp';
+import SelectorLanguageComponent from '../app/components/slc/slc';
 import ErrorPage from '../app/pages/error/error-page';
 import { Menu, MyAccountApiFactory } from '../app/typescript-axios';
 import Users from '../app/pages/authenticated/users/users';
@@ -34,14 +34,14 @@ import Devices from '../app/pages/authenticated/devices/devices';
 import CookiePolicy from '../app/pages/cookie-policy/cookie-policy';
 import LegalNotice from '../app/pages/legal-notice/legal-notice';
 import Confidentiality from '../app/pages/confidentiality/confidentiality';
-import Device from '../app/pages/authenticated/devices/device/device';
-import AccountNotYetActivated from '../app/pages/account-not-yet-activated/account-not-yet-activated';
-import Institutions from '../app/pages/authenticated/institutions/institutions';
-import Institution from '../app/pages/authenticated/institutions/institution/institution';
+import Device from '../app/pages/authenticated/devices/d/d';
+import AccountNotYetActivated from '../app/pages/anya/anya';
+import Institutions from '../app/pages/authenticated/institutions/i';
+import Institution from '../app/pages/authenticated/institutions/i/i';
 import NotPremiumPage from '../app/pages/not-premium/not-premium-page';
 import { VERSION } from '../environments/environment';
 import VerifyAccount from '../app/pages/verify-account/verify-account';
-import Maintenance from '../app/pages/authenticated/maintenance/maintenance';
+import Maintenance from '../app/pages/authenticated/m/m';
 
 const apiService = MyAccountApiFactory();
 

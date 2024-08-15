@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import SelectorLanguageComponent from '../../components/selector-language-component/selector-language-component';
+import SelectorLanguageComponent from '../../components/slc/slc';
 import { useTranslation } from 'react-i18next';
 
 /* eslint-disable-next-line */
