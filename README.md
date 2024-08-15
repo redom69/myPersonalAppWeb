@@ -40,12 +40,12 @@ Make sure PostgreSQL is running, and create a database for the project. Then, cr
 
 ```env
 # Connect to Supabase via connection pooling with Supavisor.
-DATABASE_URL="postgresql://postgres.umzjuxgnvbtuprjyeyjt:Iup6*4Cc2JE3W426NdTP@aws-0-eu-west-2.pooler.supabase.com:6543/postgres?pgbouncer=true"
+DATABASE_URL="postgresql://postgres:pass@postgres:6543/postgres"
 
 # Direct connection to the database. Used for migrations.
-DIRECT_URL="postgresql://postgres.umzjuxgnvbtuprjyeyjt:Iup6*4Cc2JE3W426NdTP@aws-0-eu-west-2.pooler.supabase.com:5432/postgres"
+DIRECT_URL="postgresql://postgres:pass@postgres:6543/postgres"
 
-jwtSecretKey=4b6ffc336c0add68a5f05f103b91663213a21a900816a9b3ac78a9e27f7acfafb0de133d7d8f13819596151a9492cbdcb4a60f1e0a5b4081d88da2f893e79c66
+jwtSecretKey=your-key
 ```
 
 ### Prisma Migrations
