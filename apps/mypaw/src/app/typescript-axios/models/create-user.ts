@@ -1,8 +1,8 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * Marsinet
- * The marsinet API description
+ * 
+ * The  API description
  *
  * OpenAPI spec version: 2.1.1
  *
