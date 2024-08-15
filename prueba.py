@@ -4,7 +4,7 @@ import os
 LIMIT = 128
 
 # Ruta del proyecto (modificar para apuntar a la raíz de tu proyecto)
-project_root = r'C:\Users\Dani\Documents\myPersonalAppWeb\apps'
+project_root = r'C:\Users\Dani\Documents\myPersonalAppWeb\myPersonalAppWeb\apps'
 
 def check_file_names(root_dir):
     """Verifica la longitud de los nombres de archivos y muestra los que exceden el límite."""

@@ -41,7 +41,7 @@ jobs:
       - name: Run Lint
         run: |
           npx nx lint api
-          npx  nx lint mypaw
+          npx nx lint mypaw
 
       - name: Run Tests
         run: |
@@ -50,5 +50,5 @@ jobs:
 
       - name: Build Projects
         run: |
-          npx nx-cloud record -- nx build api --skip-nx-cache --max-workers=1 --prod
-          npx nx-cloud record -- nx build mypaw --skip-nx-cache --max-workers=1 --prod
+          npx  nx build api --skip-nx-cache --max-workers=1 --prod
+          npx  nx build mypaw --skip-nx-cache --max-workers=1 --prod
