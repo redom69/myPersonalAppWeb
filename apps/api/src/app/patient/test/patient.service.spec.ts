@@ -433,7 +433,7 @@ describe('PatientService', () => {
   });
 
   describe('findAll', () => {
-    it('should return all patients for non-marsi user', async () => {
+    it('should return all patients for non-admin user', async () => {
       const user = { o_id: 'org123', role: 'clinic' };
 
       const organizationPatients = [
@@ -511,7 +511,7 @@ describe('PatientService', () => {
       expect(result[0].name).toBe('Desconocido');
       expect(result[0].surnames).toBe('Desconocido');
     });
-    it('should return all patients for marsi user', async () => {
+    it('should return all patients for admin user', async () => {
       const user = { o_id: 'org123', role: 'admin' };
 
       const patients = [
@@ -566,7 +566,7 @@ describe('PatientService', () => {
   });
 
   describe('findOne', () => {
-    it('should return a patient view for marsi user', async () => {
+    it('should return a patient view for admin user', async () => {
       const user = { role: 'admin', o_id: 'org123' };
       const patient = {
         p_id: 'patient123',
@@ -740,7 +740,7 @@ describe('PatientService', () => {
   });
 
   describe('findAllConfig', () => {
-    it('should return all patient configs for non-marsi user', async () => {
+    it('should return all patient configs for non-admin user', async () => {
       const user = { role: 'clinic', o_id: 'org123' };
 
       const patients = [
@@ -797,7 +797,7 @@ describe('PatientService', () => {
       expect(result).toHaveLength(1);
     });
 
-    it('should return all patient configs for non-marsi user with default values for patient_data', async () => {
+    it('should return all patient configs for non-admin user with default values for patient_data', async () => {
       const user = { role: 'clinic', o_id: 'org123' };
 
       const patients = [
@@ -857,7 +857,7 @@ describe('PatientService', () => {
       expect(patientConfig.height).toBe(175);
     });
 
-    it('should return all patient configs for non-marsi user with default values for config_patient', async () => {
+    it('should return all patient configs for non-admin user with default values for config_patient', async () => {
       const user = { role: 'clinic', o_id: 'org123' };
 
       const patients = [
@@ -907,7 +907,7 @@ describe('PatientService', () => {
       expect(patientConfig.height).toBe(0);
     });
 
-    it('should return all patient configs for marsi user', async () => {
+    it('should return all patient configs for admin user', async () => {
       const user = { role: 'admin', o_id: 'org123' };
 
       const patients = [

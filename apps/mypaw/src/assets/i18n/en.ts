@@ -601,8 +601,6 @@ const en = {
         informationAboutCookiesText:
           'In accordance with Law 34/2002, of 11 July, on information society services and electronic commerce (LSSI), in relation to Regulation (EU) 2016/679 of the European Parliament and of the Council, of 27 April 2016, General Data Protection Regulation (RGPD) and Organic Law 3/2018, of 5 December, on Data Protection and Guarantee of Digital Rights (LOPDGDD), it is obligatory to obtain the express consent of the user of all websites that use dispensable cookies, before the user browses them.',
         informationAboutCookiesTitle: 'INFORMATION ABOUT COOKIES',
-        processingOfPersonalDataText1:
-          'MARSI BIONICS S.L is the Data Controller of the personal data of the Data Subject and informs you that these data will be processed in accordance with the provisions of Regulation (EU) 2016/679 of 27 April 2016 (GDPR), for which you are provided with the following processing information:',
         processingOfPersonalDataText2:
           'Purposes of processing: as specified in the section on cookies used on this website.',
         processingOfPersonalDataText3:
@@ -682,8 +680,6 @@ const en = {
       legalNotice: 'I have read and accept the legal notice',
       legalNoticeTexts: {
         address: 'Address:',
-        applicableLawAndJurisdictionText:
-          'The relationship between MARSI BIONICS S.L. and the user shall be governed by current Spanish legislation and any dispute shall be submitted to the Courts and Tribunals of the city of Rivas-Vaciamadrid.',
         applicableLawAndJurisdictionTitle: 'APPLICABLE LAW AND JURISDICTION:',
         applicableLegislationText:
           'This Legal Notice is governed in each and every one of its aspects by Spanish law.',
@@ -698,49 +694,23 @@ const en = {
           'We inform you that in the event of any problem that may arise from the service contracted or product sold, you can use the European online dispute resolution platform:',
         europeanPlatformTitle:
           'EUROPEAN PLATFORM FOR ONLINE DISPUTE RESOLUTION:',
-        exclusionWarrantiesText1:
-          'MARSI BIONICS S.L. is not responsible, in any case, for the in any case, for damages of any kind that may be caused by, but not limited to may cause, by way of example: errors or omissions in the contents, lack of content, lack of availability of the portal or the transmission of viruses or malicious transmission of viruses or malicious or damaging programmes in the content, in spite of having adopted all the necessary technological necessary technological measures to avoid this.',
-        exclusionWarrantiesText2:
-          'The content, information and / or advice expressed on this website should be understood as merely indicative. MARSI BIONICS S.L. is not responsible in any way for the effectiveness or accuracy of the same, being exempt from any liability to users who make use of them, as they are the ones who must decide at their discretion the timeliness of them. This Site may publish content and comments provided by third parties. MARSI BIONICS S.L. is not responsible for the veracity and accuracy of the same, being exempt from any liability to users who make use of them.',
-        exclusionWarrantiesText3:
-          'MARSI BIONICS S.L. reserves the right to modify the content of the Site without notice and without any limitation. Likewise, the company disclaims any liability for any damages that may be caused by the lack of availability and / or continuity of this site and the services offered on it. Likewise, we cannot guarantee the absence of viruses or other elements on the Website that may cause alterations to your computer system.',
-        exclusionWarrantiesText4:
-          'MARSI BIONICS S.L. disclaims any responsibility for the services and / or information provided on other sites linked to this one, as it does not control or exercise any supervision on third party websites. We advise users of these sites to act with prudence and to consult any legal conditions that may be set out on these websites. Likewise, users who send any information to MARSI BIONICS S.L. undertake to ensure that it is truthful and does not violate any third party rights or the law.',
-        exclusionWarrantiesText5:
-          'If you believe that any content and / or information on this site violates a legitimate right or the law, please contact MARSI BIONICS S.L. via email at',
         exclusionWarrantiesText6: 'so that we can take appropriate action.',
         exclusionWarrantiesTitle: 'EXCLUSION OF WARRANTIES AND LIABILITY:',
-        generalText:
-          'MARSI BIONICS S.L. will pursue the breach of these conditions, as well as any improper use of its portal exercising all civil and criminal actions that may correspond to it by law.',
         generalTitle: 'GENERAL:',
         identificationData: 'IDENTIFICATION DATA:',
-        intellectualPropertyText1:
-          'MARSI BIONICS S.L, by itself or as an assignee, owns all intellectual and industrial property rights of its website, as well as the elements contained therein (including, but not limited to, images, sound, audio, video, software or texts; trademarks or logos, colour combinations, structure and design, selection of materials used, computer programs necessary for its operation, access and use, etc.), all rights reserved.',
-        intellectualPropertyText2:
-          'Pursuant to the provisions of Articles 8 and 32.1, second paragraph, of the second paragraph, of the Law on Intellectual Property, the reproduction, distribution and the reproduction, distribution and public communication, including the making available communication, including the making available, of all or part of the contents of this of all or part of the contents of this website, for commercial purposes, in any format and for any commercial purposes, in any medium and by any technical means, without the authorisation of MARSI BIONICS S.L. At no time, unless expressly stated otherwise, will the expressly stated otherwise, access, navigation or use of the website or its contents use of the website or its contents confers on the user any right over the distinctive signs included therein. The user undertakes to respect the Intellectual and Industrial Property rights Intellectual and Industrial property rights owned by MARSI BIONICS S.L. The unauthorised use of the unauthorised use of the information contained in this site, as well as any damage caused Site, as well as the damage caused to the rights of intellectual and industrial intellectual and industrial property rights of MARSI BIONICS S.L. may give rise to the the exercise of the corresponding legal actions and, if applicable, to the liabilities that may arise from such actions. arising from this exercise.',
-        intellectualPropertyText3:
-          'In the event that the user sends information of any kind to MARSI BIONICS S.L. through any of the channels provided for this purpose within our website, the user represents, warrants and agrees that he or she has the right to do so freely, that such information does not infringe any intellectual property rights, industrial, or any other rights of third parties, and that such information does not infringe any intellectual property rights, industrial, or any other rights of third parties, and that such information does not infringe any intellectual property rights. any other rights of third parties, and that such information is not of a information is not confidential or harmful to third parties. third parties.',
         intellectualPropertyTitle: 'INTELLECTUAL AND INDUSTRIAL PROPERTY:',
         legalNoticeTitle: 'Legal Notice',
-        modificationsText:
-          'MARSI BIONICS S.L. reserves the right to make unannounced changes it deems appropriate in its website, may change, delete or add content and services provided through the same as the way in which they are presented or located on its website.',
         modificationsTitle: 'MODIFICATIONS:',
         page: 'Page:',
         phone: 'Phone:',
         registry: 'Registered in the Commercial Registry of:',
-        rightOfExclusionText:
-          'MARSI BIONICS S.L. reserves the right to deny or withdraw access to the portal and/or the services offered without prior notice, at its own request or at the request of a third party, to those users who do not comply with these General Conditions of Use.',
         rightOfExclusionTitle: 'RIGHT OF EXCLUSION:',
         section: 'Section:',
         sheet: 'Sheet:',
         text2IdentificationData: 'The owner of this site is:',
         textIdentificationData:
           'In compliance with the information duty established in Article 10 of Law 34/2002, of July 11, on Information Society Services and Electronic Commerce, the following data is provided below:',
-        textLegalNotice:
-          'The purpose of this document is to establish and regulate the rules for the use of this website, understanding by this all the pages and their content owned by MARSI BIONICS S.L. that can be accessed through the domain www.mypaw.com. The use of the website implies the condition of user of it and implies the acceptance of all the conditions included in this Legal Notice. The user agrees to carefully read this Legal Notice on each occasion they intend to use our website, as it and its conditions of use, as set forth in this Legal Notice, may undergo modifications.',
         tome: 'Volume:',
-        usePortalText:
-          'This portal provides access to an analysis of the data collected from the use of any of the collected following the use of any of the devices marketed by Marsi Bionics. The user assumes the responsibility for the use of the portal. This responsibility extends to the extends to the registration or collection of data that may be necessary to access certain access to certain services. When registering, the user will be responsible for providing truthful and lawful information.',
         usePortalTitle: 'USE OF THE PORTAL:',
         usersText:
           'The access and/or use of this web portal attributes the condition of USER, who accepts, from said access and/or use, the General Conditions of Use reflected herein. The aforementioned Conditions shall be applicable independently of the General Conditions of Contracting Contracting Conditions which, where applicable, are mandatory.',
@@ -783,8 +753,6 @@ const en = {
       postal_codeInvalidCharacters: 'Invalid characters in the postal code',
       postal_codeRequired: 'Postal code is required',
       privacyPoliceTexts: {
-        accuracyVeracityText:
-          'As a user, you are solely responsible for the accuracy and correctness of the data you submit, exonerating MARSI BIONICS S.L. from any liability in this regard. Users guarantee and are responsible, in any case, for the accuracy, validity and authenticity of the personal data provided, and undertake to keep them duly updated.',
         accuracyVeracityTitle: 'ACCURACY AND VERACITY OF DATA',
         additionalInformationText1:
           'If you need additional information on data protection, you can send us an email to ',
@@ -792,15 +760,9 @@ const en = {
           ' or a communication addressed to Calle Marie Curie, 13, Edif. Bioma, Planta 6, Oficinas 1-2, CP 28521 Rivas-Vaciamadrid, Madrid and, depending on the type of relationship you have with our company and the processing of personal data that we carry out, we will provide you with the corresponding additional information.',
         additionalInformationTitle: 'ADDITIONAL INFORMATION ON DATA PROTECTION',
         address: 'Address:',
-        changesPrivacyPoliceText:
-          'MARSI BIONICS S.L. reserves the right to modify this policy to adapt it to new legislation or jurisprudence, as well as industry practices. In such cases, it will announce on this page the changes introduced reasonably in advance of their implementation.',
         changesPrivacyPoliceTitle: 'CHANGES IN THE PRIVACY POLICY',
         cif: 'VAT NUMBER:',
         companyName: 'Company Name',
-        dataConfidentialityText1:
-          'MARSI BIONICS S.L. undertakes to use and process the user´s personal data, respecting their confidentiality, in accordance with their purpose; as well as to comply with its obligation to store them and adopt all measures to prevent alteration, loss, unauthorised processing or access, in accordance with the provisions of current data protection regulations.',
-        dataConfidentialityText2:
-          'MARSI BIONICS S.L. cannot guarantee the absolute impregnability of the Internet, nor, therefore, the violation of data through fraudulent access to them by third parties. With regard to the confidentiality of processing, MARSI BIONICS S.L will ensure that any person who is authorised by MARSI BIONICS S.L to process customer data (including its staff, collaborators and service providers), is under an appropriate obligation of confidentiality (whether this is a contractual or legal duty).',
         dataConfidentialityTitle: 'DATA CONFIDENTIALITY AND SECURITY',
         dataProcessingText:
           'The processing, communication and transfer of personal data collected on this website shall comply with the provisions of the regulations on the protection of personal data, and in particular with Organic Law 3/2018, of 5 December, on the Protection of Personal Data and the guarantee of digital rights, and the current Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of individuals with regard to the processing of personal data and on the free movement of such data and repealing Directive 95/46/EC.',
@@ -815,8 +777,6 @@ const en = {
         howLongWillWeProcessText4:
           'or by telephone at 914 90 00 90 or at the postal address Marie Curie 13, Planta 6, Edif. Bioma, Oficinas 1-2, 28521 Rivas-Vaciamadrid, Madrid.',
         howLongWillWeProcessTitle: 'For how long will we process your data?',
-        personalDataThirdPartiesText1:
-          'In the event that the personal data provided belong to a third party, as a user you warrant that you have informed the third party of this Privacy Policy and have obtained their permission to provide their data to MARSI BIONICS S.L. for the purposes indicated.',
         personalDataThirdPartiesText2:
           'Likewise, you guarantee that the data provided are accurate and up to date, being responsible for any damage or loss, direct or indirect, that may be caused as a result of non-compliance with this obligation.',
         personalDataThirdPartiesTitle: 'PERSONAL DATA OF THIRD PARTIES',
@@ -825,8 +785,6 @@ const en = {
         pivacyPoliceTitle: 'PRIVACY POLICY',
         responsability:
           'Security Officer or Data Protection Officer, if applicable:',
-        securityBreachNotificationText:
-          'MARSI BIONICS S.L. takes security measures appropriate to the level of risk to protect personal information against loss, misuse and unauthorized access, disclosure, alteration and destruction, taking into account the risks involved in the processing and the nature of personal information; however, if MARSI BIONICS S. L. determines that the personal information it processes has been misappropriated, exposed by a security breach or improperly acquired by a third party, MARSI BIONICS S. L. will act immediately, taking into account the risks involved in the processing and the nature of the personal information. L determines that the personal data it processes has been misappropriated, exposed by a security breach or improperly acquired by a third party, MARSI BIONICS S.L will act immediately taking into account the provisions of the GDPR and the competent data protection authorities.',
         securityBreachNotificationTitle:
           'SECURITY BREACH NOTIFICATION AND DECLARATION',
         whatDataProcessText1:
@@ -845,20 +803,12 @@ const en = {
         whatDataProcessTitle: 'What data do we process?',
         whatLegitimateBasisText1:
           'The legal basis for the processing of your data is:',
-        whatLegitimateBasisText2:
-          'The execution of a contract with MARSI BIONICS S.L, for the procurement of services and / or products and manage the services requested.',
         whatLegitimateBasisText3:
           'The user´s consent in relation to contact, subscription to content and the sending of commercial communications, via email, cookies or messaging systems.',
-        whatLegitimateBasisText4:
-          'The legitimate interest of the data controller to protect users of the MARSI BIONICS S.L. website from abuse and fraud in the use of our services.',
         whatLegitimateBasisTitle:
           'What is the legitimate basis for processing your data?',
-        whatPurposesDoWeProcessText1:
-          'The personal data appearing on this website are extracted from any of the Marsi Bionics products and/or applications used by the user.',
         whatPurposesDoWeProcessText2:
           'The purpose of the processing of this data is to represent the results obtained after the use of the device or application. This data may be consulted by the user and/or by the clinical staff in charge of monitoring their data.',
-        whatPurposesDoWeProcessText3:
-          'MARSI BIONICS technical staff will have access to the device usage data to ensure that the device is properly maintained.',
         whatPurposesDoWeProcessTitle:
           'For what purposes do we process your personal data?',
         whatYoursRightsText1:

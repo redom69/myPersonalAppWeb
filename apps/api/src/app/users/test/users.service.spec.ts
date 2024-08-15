@@ -42,7 +42,7 @@ describe('UsersService', () => {
   });
 
   describe('findAll', () => {
-    it('should return an array of users for marsi role', async () => {
+    it('should return an array of users for admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -105,7 +105,7 @@ describe('UsersService', () => {
       ]);
     });
 
-    it('should return an array of users for non-marsi role', async () => {
+    it('should return an array of users for non-admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',

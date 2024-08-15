@@ -150,7 +150,7 @@ describe('DevicesService', () => {
   });
 
   describe('findAll', () => {
-    it('should return all devices for marsi role', async () => {
+    it('should return all devices for admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -240,7 +240,7 @@ describe('DevicesService', () => {
   });
 
   describe('findOne', () => {
-    it('should retrieve a device by its ID for marsi role', async () => {
+    it('should retrieve a device by its ID for admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -268,7 +268,7 @@ describe('DevicesService', () => {
       expect(await service.findOne('1', user)).toBe(device);
     });
 
-    it('should throw an error if device not found for marsi role', async () => {
+    it('should throw an error if device not found for admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -288,7 +288,7 @@ describe('DevicesService', () => {
       );
     });
 
-    it('should retrieve a device by its ID for non-marsi role', async () => {
+    it('should retrieve a device by its ID for non-admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -329,7 +329,7 @@ describe('DevicesService', () => {
       );
     });
 
-    it('should throw an error if device not found for non-marsi role', async () => {
+    it('should throw an error if device not found for non-admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -355,7 +355,7 @@ describe('DevicesService', () => {
       );
     });
 
-    it('should throw an error if device not found after checking organization for non-marsi role', async () => {
+    it('should throw an error if device not found after checking organization for non-admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -433,7 +433,7 @@ describe('DevicesService', () => {
   });
 
   describe('update', () => {
-    it('should update a device by its ID for marsi role', async () => {
+    it('should update a device by its ID for admin role', async () => {
       const updateDeviceDto: UpdateDeviceDto = { model: 'Updated Model' };
       const user: UserTokenDto = {
         u_id: '123',
@@ -464,7 +464,7 @@ describe('DevicesService', () => {
       );
     });
 
-    it('should update a device by its ID for non-marsi role', async () => {
+    it('should update a device by its ID for non-admin role', async () => {
       const updateDeviceDto: UpdateDeviceDto = { model: 'Updated Model' };
       const user: UserTokenDto = {
         u_id: '123',
@@ -505,7 +505,7 @@ describe('DevicesService', () => {
       );
     });
 
-    it('should throw an error if device not found in user organization for non-marsi role', async () => {
+    it('should throw an error if device not found in user organization for non-admin role', async () => {
       const updateDeviceDto: UpdateDeviceDto = { model: 'Updated Model' };
       const user: UserTokenDto = {
         u_id: '123',
@@ -555,7 +555,7 @@ describe('DevicesService', () => {
   });
 
   describe('remove', () => {
-    it('should delete a device by its ID for marsi role', async () => {
+    it('should delete a device by its ID for admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -583,7 +583,7 @@ describe('DevicesService', () => {
       expect(await service.remove('1', user)).toBe(device);
     });
 
-    it('should throw an error if device not found in user organization for non-marsi role', async () => {
+    it('should throw an error if device not found in user organization for non-admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -807,7 +807,7 @@ describe('DevicesService', () => {
   });
 
   describe('removeFromOrg', () => {
-    it('should delete relation of device with its organization for marsi role', async () => {
+    it('should delete relation of device with its organization for admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -838,7 +838,7 @@ describe('DevicesService', () => {
       expect(await service.removeFromOrg('1', user)).toBe(device);
     });
 
-    it('should delete relation of device with its organization for non-marsi role', async () => {
+    it('should delete relation of device with its organization for non-admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',
@@ -904,7 +904,7 @@ describe('DevicesService', () => {
       );
     });
 
-    it('should throw an error if device not found in user organization for non-marsi role', async () => {
+    it('should throw an error if device not found in user organization for non-admin role', async () => {
       const user: UserTokenDto = {
         u_id: '123',
         email: 'test@example.com',

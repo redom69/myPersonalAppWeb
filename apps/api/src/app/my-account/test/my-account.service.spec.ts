@@ -194,7 +194,7 @@ describe('MyAccountService', () => {
   });
 
   describe('getMenu', () => {
-    it('should return menu for active marsi user', async () => {
+    it('should return menu for active admin user', async () => {
       const user = { u_id: 'user123', role: 'admin' };
       (user_is_active as jest.Mock).mockResolvedValue(true);
       (get_if_organization_has_premium as jest.Mock).mockResolvedValue(true);
@@ -368,7 +368,7 @@ describe('MyAccountService', () => {
   });
 
   describe('getMyDevices', () => {
-    it('should return all devices for user with marsi role', async () => {
+    it('should return all devices for user with admin role', async () => {
       const user = {
         u_id: 'user123',
         organizations: { role: 'admin', o_id: 'org123' },
@@ -387,7 +387,7 @@ describe('MyAccountService', () => {
       expect(prisma.devices.findMany).toHaveBeenCalled();
     });
 
-    it('should return organization devices for user without marsi role', async () => {
+    it('should return organization devices for user without admin role', async () => {
       const user = {
         u_id: 'user123',
         organizations: { role: 'clinic', o_id: 'org123' },

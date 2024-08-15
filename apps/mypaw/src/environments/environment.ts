@@ -6,7 +6,6 @@ export const VERSION = '0.0.1';
 export const environment = {
   production: false,
   apiBaseUrl: 'http://localhost:3334',
-  // apiBaseUrl: 'https://api.develop.marsinet.com',
   loginForm: {
     username: 'email-ayuda.test@test.com',
     password: 'admin',
